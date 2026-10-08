@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <metadata>
+        <encoders>Dash Geiser, Rayne Robertson, Nick Grundman</encoders>
+        <title>Advanced Dungeons and Dragons</title>
+        <info>This project aims to make the 1st edition Player's Guide to Advanced Dungeons and
+            Dragons (1978) readable, both with tooltips over the text and a handy tool to sort
+            through available characteristics when building a character. This information and the
+            text will all be hosted on a GitHub Pages site right here on this repo.</info>
+    </metadata>
+</root>
