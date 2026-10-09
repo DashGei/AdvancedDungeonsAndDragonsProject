@@ -1,9 +1,14 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = spells
 spells = element spells { spell+ }
-spell = element spell { name, school+, reversible, class, level, range, duration, aoe?, component+, cast_time, saving_throw, damage, desc }
+spell = element spell { name, school+, reversible, class, level, range, range_scaling, duration, aoe?, shape?, component+, cast_time, saving_throw, mixed { (damage, material)* } }
 
-# nrg: most of these are attributes, not elements... which we may want to change later. when we try to actually encode some spells with this schema we can modify it
+# nrg: i think we need a base unit for distance and time so we don't need to mess with units anywhere
+#      for distance maybe inches, time can be seconds or segments (6 sec each)
+#      segment = 6 seconds
+#      rounds = 10 segments (60 seconds, 1 minute)
+#      turn = 10 rounds (600 seconds, 10 minutes)
+
 
 # nrg: non-gameplay elements of a spell
 name = attribute name { text }
@@ -12,20 +17,23 @@ level = attribute level { xsd:int { pattern = "[1-9]" } } # nrg: limits spell le
 desc = element desc { text } # nrg: original text description, will be copy pasted and formatted. we may want to tool-tip these later, but that's a future problem
 
 # nrg: gameplay elements of a spell
-# nrg: in the text, a slash is treated as one unseparatable school of magic whereas a hyphen and a comma are used interchangably to refer to completely different schools 
+#      in the text, a slash is treated as one unseparatable school of magic whereas a hyphen and a comma are used interchangably to refer to completely different schools 
 school = attribute school { "Abjuration" | "Alteration" | "Conjuration/Summoning" | "Divination" | "Evocation" |
                             "Enchantment/Charm" | "Illusion/Phantasm" | "Invocation" |  "Necromantic" }
 reversible = attribute reversible { xsd:boolean }
 range = attribute range { xsd:int } # nrg: inches and feet in original text will be converted to modern DND units (maybe)
-duration = attribute duration { text | "xsd:int" } # nrg: duration is defined in strange ways in the text. likely needs changing later
+range_scaling = attribute range_scaling { xsd:int } # nrg: not sure how many types of range scaling there are, this assumes only per level
+duration = attribute duration { text | "Special" | "Instantaneous" | "Permanent" | xsd:int } # nrg: duration is defined strangly, need better understanding of combat turns
 aoe = attribute aoe { text } # nrg: also defined very strangely. needs proper configuration
-component = element component { "verbal" | "somatic" | material } # nrg: verbal and somaatic need no further information, material usually has specific items
+shape = attribute shape { "sphere" | "cube" | "radius" | text } # nrg: not sure how radius differs from sphere
+component = attribute component { list { ( "V" | "S" | "M" )* } } # nrg: theoretically could have the same one multiple times, but works for now
 
 cast_time = attribute cast_time { xsd:int | text } # nrg: number of segments/rounds/turns (or sometimes literally 'Special'... also needs proper definition)
 saving_throw = attribute saving_throw { "None" | "Special" | "1/2"  | "Negated" }
 
 # nrg: will be annotated in the description and enclose original text for ease of markup
 material = element material { text }
-damage = element damage { roll, modifier, text}
+damage = element damage { roll, scaling?, modifier?, text}
 roll = attribute roll { "d2" | "d4" | "d6" | "d8" | "d10" | "d12" | "d20" }
+scaling = attribute scaling { "One additional die per level" | text }
 modifier = attribute modifier { xsd:int }
