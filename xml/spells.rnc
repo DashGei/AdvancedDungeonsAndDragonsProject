@@ -34,6 +34,6 @@ saving_throw = attribute saving_throw { "None" | "Special" | "1/2"  | "Negated" 
 # nrg: will be annotated in the description and enclose original text for ease of markup
 material = element material { text }
 damage = element damage { roll, scaling?, modifier?, text}
-roll = attribute roll { "d2" | "d4" | "d6" | "d8" | "d10" | "d12" | "d20" }
+roll = attribute roll { "d2" | "d4" | "d6" | "d8" | "d10" | "d12" | "d20" | "d100"}
 scaling = attribute scaling { "One additional die per level" | text }
 modifier = attribute modifier { xsd:int }
