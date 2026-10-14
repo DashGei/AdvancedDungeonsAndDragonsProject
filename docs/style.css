@@ -15,19 +15,32 @@ header {
     justify-content: center;
     flex-direction: column;
 }
+
+/* 
+ * nrg: All of this is very lazy and we need to make it nicer later .......
+ */
+h1.header {
+    margin: 0px;
+}
+
+h3.header {
+    margin: 0px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
 .styled-table {
     border-collapse: collapse;
-    font: Bookerly;
     width: 100%;
     max-width: 100%;
     box-shadow: 0 5px 10px #062131;
     background-color: #b48e78;
     color: #f5e1da;
-
     text-align: left;
     font-size: 20px;
     padding: 12px 15px;
-
 }
 
 .styled-table tr.active-row {
