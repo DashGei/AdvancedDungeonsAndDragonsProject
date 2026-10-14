@@ -1,0 +1,17 @@
+@font-face {
+  font-family: GothicOne; /* set name */
+  src: url(fonts/MontenegrinGothicOne-Regular.ttf); /* url of the font */
+}
+
+body {
+     background: rgb(225, 225, 225);
+     font-family: Calibri, Arial, "Times New Roman";   
+}
+
+header {
+    font-family: GothicOne, Calibri, Arial, "Times New Roman";   
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
