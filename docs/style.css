@@ -4,7 +4,7 @@
 }
 
 body {
-     background: rgb(225, 225, 225);
+     background: rgb(199, 195, 172);
      font-family: Calibri, Arial, "Times New Roman";   
 }
 
@@ -14,4 +14,26 @@ header {
     text-align: center;
     justify-content: center;
     flex-direction: column;
+}
+.styled-table {
+    border-collapse: collapse;
+    font: Bookerly;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 5px 10px #062131;
+    background-color: #b48e78;
+    color: #f5e1da;
+
+    text-align: left;
+    font-size: 20px;
+    padding: 12px 15px;
+
+}
+
+.styled-table tr.active-row {
+    background-color: #7e6840;
+}
+
+.styled-table tbody tr:nth-child(odd) {
+    background-color: #9c866a;
 }
