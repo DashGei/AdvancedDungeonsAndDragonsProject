@@ -2,7 +2,7 @@
 <?xml-model href="tables.rnc" type="application/relax-ng-compact-syntax"?>
 <tables><table>
     <thead>
-        <td>Ability Score</td><td>General Information</td>
+        <tr><td>Ability Score</td><td>General Information</td></tr>
     </thead>
     <tr>
         <td>3</td><td>-</td>

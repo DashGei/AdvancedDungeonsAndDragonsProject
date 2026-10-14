@@ -3,6 +3,6 @@ start = tables
 # wdg: Tables are currently formatted as they are in the html, excluding the css. Currently unsure on how to enforce table rows all having the same amount of cells.
 tables = element tables {table}
 table = element table {thead, tr+}
-thead = element thead {td+}
+thead = element thead {tr+}
 tr = element tr {td+}
 td = element td {text}
