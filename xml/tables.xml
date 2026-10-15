@@ -11,7 +11,7 @@
         <td>4</td><td>-</td>
     </tr>
     <tr>
-        <td>5</td><td>Here or lower the character can only be a magic-user</td>
+        <td>5</td><td>Here or lower the character can only be a <spec class="magic-user">magic-user</spec></td>
     </tr>
     <tr>
         <td>6</td><td>Minimum strength for a gnome, half-orc, or halfling character</td>
