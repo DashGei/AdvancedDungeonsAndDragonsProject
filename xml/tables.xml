@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="tables.rnc" type="application/relax-ng-compact-syntax"?>
+<!-- nrg: 
+     I may have made some drastic changes with the help of Mr. Gemini (who informed me of the ability to search *outside* of the immediate element with:
+                          //tr[td/spec[@minmax="max" and contains(@sex, "female") and contains(@race, "gnome")]]/td[1] 
+     which is the most beautiful XPath function in the universe... I am fairly certain this will work for this and all other tables and, helpfully, 
+     this will now produce the Exceptional Strength modifiers as well because it just returns the first column in the table
+-->
 <tables><table>
     <thead>
         <tr><td>Ability Score</td><td>General Information</td></tr>
@@ -11,19 +17,33 @@
         <td>4</td><td>-</td>
     </tr>
     <tr>
-        <td>5</td><td>Here or lower the character can only be a <spec class="magic-user">magic-user</spec></td>
+        <td>5</td><td>Here or lower the character can only be a magic-user</td>
     </tr>
     <tr>
-        <td><spec minmax="min">6</spec></td><td>Minimum strength for a <spec race="gnome">gnome</spec>, <spec race="half-orc">half-orc</spec>, or <spec race="halfling">halfling</spec> character</td>
+        <td>6</td>
+        <td>
+            <spec minmax="min" sex="male female" race="gnome"/>
+            <spec minmax="min" sex="male female" race="half-orc"/>
+            <spec minmax="min" sex="male female" race="halfling"/>
+            Minimum strength for a gnome, half-orc, or halfling character
+        </td>
     </tr>
         <tr>
             <td>7</td><td>-</td>
         </tr>
         <tr>
-            <td><spec minmax="min">8</spec></td><td>Minimum strength for a <spec race="dwarf">dwarf</spec> character</td>
+            <td>8</td>
+            <td>
+                <spec minmax="min" sex="male female" race="dwarf"/>
+                Minimum strength for a dwarf character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="min">9</spec></td><td>Minimum strength for a <spec class="fighter">fighter</spec> character</td>
+            <td>9</td>
+            <td>
+                <spec minmax="min" sex="male female" class="fighter"/>
+                Minimum strength for a fighter character
+            </td>
         </tr>
         <tr>
             <td>10</td><td>-</td>
@@ -32,41 +52,95 @@
             <td>11</td><td>-</td>
         </tr>
         <tr>
-            <td><spec minmax="min" class="assassin paladin">12</spec></td><td>Minimum strength for an assassin or paladin character</td>
+            <td>12</td>
+            <td>
+                <spec minmax="min" sex="male female" class="assassin"/>
+                <spec minmax="min" sex="male female" class="paladin"/>
+                Minimum strength for an assassin or paladin character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="min" class="ranger">13</spec></td><td>Minimum strength for a ranger character</td>
+            <td>13</td>
+            <td>
+                <spec minmax="min" sex="male female" class="ranger"/>
+                Minimum strength for a ranger character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="female" race="halfling">14</spec></td><td>Maximum strength possible for a female halfling character</td>
+            <td>14</td>
+            <td>
+                <spec minmax="max" sex="female" race="halfling"/>
+                Maximum strength possible for a female halfling character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max min" sex="female" race="gnome" class="monk">15</spec></td><td>Maximum strength possible for a female gnome character, minimum strength for a monk character</td>
+            <td>15</td>
+            <td>
+                <spec minmax="max" sex="female" race="gnome"/>
+                <spec minmax="min" sex="male female" class="monk"/>
+                Maximum strength possible for a female gnome character, minimum strength for a monk character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="female" race="elf">16</spec></td><td>Maximum strength possible for a female elf character</td>
+            <td>16</td>
+            <td>
+                <spec minmax="max" sex=" female" race="elf"/>
+                Maximum strength possible for a female elf character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="female male" race="dwarf half-elf halfling">17</spec></td><td>Maximum strength possible for a female dwarf or female half-elf or male halfling character</td>
+            <td>17</td>
+            <td>
+                <spec minmax="max" sex="female" race="dwarf"/>
+                <spec minmax="max" sex="female" race="half-elf"/>
+                <spec minmax="max" sex="male" race="halfling"/>
+                Maximum strength possible for a female dwarf or female half-elf or male halfling character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" class="assassin bard cleric druid illusionist magic-user monk assassin thief">18</spec></td><td>Maximum strength possible for all non-fighter characters</td>
+            <td>18</td>
+            <td>
+                <spec minmax="max" sex="male female" class="assassin bard cleric druid illusionist magic-user monk assassin thief"/>
+                Maximum strength possible for all non-fighter characters
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="female male" race="human gnome">18</spec>/01-50</td><td>Maximum strength possible for a female human or male gnome character</td>
+            <td>18/01-50</td>
+            <td>
+                <spec minmax="max" sex="female" race="human"/>
+                <spec minmax="max" sex="male" race="gnome"/>
+                Maximum strength possible for a female human or male gnome character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="male female" race="elf half-orc">18</spec>/51-75</td><td>Maximum strength possible for a male elf or female half-orc character</td>
+            <td>18/51-75</td>
+            <td>
+                <spec minmax="max" sex="male" race="elf"/>
+                <spec minmax="max" sex="female" race="half-orc"/>
+                Maximum strength possible for a male elf or female half-orc character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="male" race="half-elf">18</spec>/76-90</td><td>Maximum strength possible for a male half-elf character</td>
+            <td>18/76-90</td>
+            <td>
+                <spec minmax="max" sex="male" race="half-elf"/>
+                Maximum strength possible for a male half-elf character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" sex="male" race="dwarf half-orc">18</spec>/91-99</td><td>Maximum strength for a male dwarf or male half-orc character</td>
+            <td>18/91-99</td>
+            <td>
+                <spec minmax="max" sex="male" race="dwarf"/>
+                <spec minmax="max" sex="male" race="half-orc"/>
+                Maximum strength for a male dwarf or male half-orc character
+            </td>
         </tr>
         <tr>
-            <td><spec minmax="max" race="human">18</spec>/00</td><td>Maximum human strength</td>
+            <td>18/00</td>
+            <td>
+                <spec minmax="max" sex="male" race="human"/>
+                Maximum human strength
+            </td>
         </tr>
-
 </table>
 </tables>
