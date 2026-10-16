@@ -2,9 +2,10 @@
 <?xml-model href="tables.rnc" type="application/relax-ng-compact-syntax"?>
 <!-- nrg: 
      I may have made some drastic changes with the help of Mr. Gemini (who informed me of the ability to search *outside* of the immediate element with:
-                          //tr[td/spec[@minmax="max" and contains(@sex, "female") and contains(@race, "gnome")]]/td[1] 
+                          //tr[td/spec[@minmax="max" and contains(@sex, "fem") and @race="gnome"]]/td[1] 
      which is the most beautiful XPath function in the universe... I am fairly certain this will work for this and all other tables and, helpfully, 
      this will now produce the Exceptional Strength modifiers as well because it just returns the first column in the table
+     you can edit all the quoted values to be as you desire and it should work for all of them and not return two values
 -->
 <tables><table>
     <thead>
@@ -22,9 +23,9 @@
     <tr>
         <td>6</td>
         <td>
-            <spec minmax="min" sex="male female" race="gnome"/>
-            <spec minmax="min" sex="male female" race="half-orc"/>
-            <spec minmax="min" sex="male female" race="halfling"/>
+            <spec minmax="min" sex="male fem" race="gnome"/>
+            <spec minmax="min" sex="male fem" race="half-orc"/>
+            <spec minmax="min" sex="male fem" race="halfling"/>
             Minimum strength for a gnome, half-orc, or halfling character
         </td>
     </tr>
@@ -34,14 +35,14 @@
         <tr>
             <td>8</td>
             <td>
-                <spec minmax="min" sex="male female" race="dwarf"/>
+                <spec minmax="min" sex="male fem" race="dwarf"/>
                 Minimum strength for a dwarf character
             </td>
         </tr>
         <tr>
             <td>9</td>
             <td>
-                <spec minmax="min" sex="male female" class="fighter"/>
+                <spec minmax="min" sex="male fem" class="fighter"/>
                 Minimum strength for a fighter character
             </td>
         </tr>
@@ -54,70 +55,70 @@
         <tr>
             <td>12</td>
             <td>
-                <spec minmax="min" sex="male female" class="assassin"/>
-                <spec minmax="min" sex="male female" class="paladin"/>
+                <spec minmax="min" sex="male fem" class="assassin"/>
+                <spec minmax="min" sex="male fem" class="paladin"/>
                 Minimum strength for an assassin or paladin character
             </td>
         </tr>
         <tr>
             <td>13</td>
             <td>
-                <spec minmax="min" sex="male female" class="ranger"/>
+                <spec minmax="min" sex="male fem" class="ranger"/>
                 Minimum strength for a ranger character
             </td>
         </tr>
         <tr>
             <td>14</td>
             <td>
-                <spec minmax="max" sex="female" race="halfling"/>
-                Maximum strength possible for a female halfling character
+                <spec minmax="max" sex="fem" race="halfling"/>
+                Maximum strength possible for a fem halfling character
             </td>
         </tr>
         <tr>
             <td>15</td>
             <td>
-                <spec minmax="max" sex="female" race="gnome"/>
-                <spec minmax="min" sex="male female" class="monk"/>
-                Maximum strength possible for a female gnome character, minimum strength for a monk character
+                <spec minmax="max" sex="fem" race="gnome"/>
+                <spec minmax="min" sex="male fem" class="monk"/>
+                Maximum strength possible for a fem gnome character, minimum strength for a monk character
             </td>
         </tr>
         <tr>
             <td>16</td>
             <td>
-                <spec minmax="max" sex=" female" race="elf"/>
-                Maximum strength possible for a female elf character
+                <spec minmax="max" sex=" fem" race="elf"/>
+                Maximum strength possible for a fem elf character
             </td>
         </tr>
         <tr>
             <td>17</td>
             <td>
-                <spec minmax="max" sex="female" race="dwarf"/>
-                <spec minmax="max" sex="female" race="half-elf"/>
+                <spec minmax="max" sex="fem" race="dwarf"/>
+                <spec minmax="max" sex="fem" race="half-elf"/>
                 <spec minmax="max" sex="male" race="halfling"/>
-                Maximum strength possible for a female dwarf or female half-elf or male halfling character
+                Maximum strength possible for a fem dwarf or fem half-elf or male halfling character
             </td>
         </tr>
         <tr>
             <td>18</td>
             <td>
-                <spec minmax="max" sex="male female" class="assassin bard cleric druid illusionist magic-user monk assassin thief"/>
+                <spec minmax="max" sex="male fem" class="assassin bard cleric druid illusionist magic-user monk assassin thief"/>
                 Maximum strength possible for all non-fighter characters
             </td>
         </tr>
         <tr>
             <td>18/01-50</td>
             <td>
-                <spec minmax="max" sex="female" race="human"/>
+                <spec minmax="max" sex="fem" race="human"/>
                 <spec minmax="max" sex="male" race="gnome"/>
-                Maximum strength possible for a female human or male gnome character
+                Maximum strength possible for a fem human or male gnome character
             </td>
         </tr>
         <tr>
             <td>18/51-75</td>
             <td>
                 <spec minmax="max" sex="male" race="elf"/>
-                <spec minmax="max" sex="female" race="half-orc"/>
-                Maximum strength possible for a male elf or female half-orc character
+                <spec minmax="max" sex="fem" race="half-orc"/>
+                Maximum strength possible for a male elf or fem half-orc character
             </td>
         </tr>
         <tr>

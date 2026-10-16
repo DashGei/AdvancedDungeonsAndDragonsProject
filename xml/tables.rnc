@@ -9,5 +9,5 @@ td = element td {mixed{spec*}}
 spec = element spec {(minmax | race | sex | class)+, text} # nrg: td has to be mixed because it has text and elements, but spec can only have attributes and contain text
 minmax = attribute minmax { list { ("max" | "min")+ } } # nrg: found list which allows for this (and on class and race)
 class = attribute class { list { ("assassin" | "bard" | "cleric" | "druid" | "fighter" | "illusionist" | "magic-user" | "monk" | "paladin" | "ranger" | "thief")+ } }
-sex = attribute sex {list { ("male" | "female")+ } }
+sex = attribute sex {list { ("male" | "fem")+ } }
 race = attribute race { list { ("dwarf" | "elf" | "gnome" | "half-elf" | "halfling" | "half-orc" | "human")+ } }
