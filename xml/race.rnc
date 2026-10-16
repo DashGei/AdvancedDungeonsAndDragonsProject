@@ -1,0 +1,12 @@
+start = root
+root = element root { race, desc, tooltips }
+
+race = element race { attribute type { text }, text }
+desc = element desc { p+ }
+p = element p { (text | style | term)* }
+
+style = element style { attribute type { "bold" | "italic" }, text }
+term = element term { attribute ref { text }, text }
+
+tooltips = element tooltips { tooltip+ }
+tooltip = element tooltip { attribute id { xsd:ID }, text }

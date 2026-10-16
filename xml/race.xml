@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="race.rnc" type="application/relax-ng-compact-syntax"?>
+<root>
+    <race type="halfelf">Half-Elves:</race>
+        <desc>
+            <p>
+                Half-elves do not form a race unto themselves, but rather they can be 
+                found amongst both elvenkind and men. For details of the typical half-elf 
+                see <style type="bold">ADVANCED DUNGEONS &amp; DRAGONS, MONSTER MANUAL</style> under the 
+                heading <style type="italic">Elf</style>.
+            </p> 
+            
+            <p>
+                A character of half-elven race can play as a 
+                <term ref="cleric">cleric</term> (maximum of 5th level), 
+                <term ref="druid">druid</term>, 
+                <term ref="fighter">fighter</term> (maximum of 8th level), 
+                <term ref="ranger">ranger</term> (maximum of 8th level), 
+                <term ref="magicuser">magic-user</term> (maximum of 8th level), 
+                <term ref="thief">thief</term>, or 
+                <term ref="assassin">assassin</term> (maximum of 11th level). 
+                
+                A character of half-elven race can also opt to become a <term ref="multiclass">multi- 
+                classed</term> individual, i.e. clericlfighter, cleric/ranger, cleric/magic-user, 
+                fighter/magic-user, fighte/thief, magic-user/thief, cleric/fighter/magic- 
+                user, or a fighter/magic-user/thief.
+                
+                Half-elven characters who choose the cleric as one of their multi-classes aren't limited by that class' proscriptions 
+                upon weapons usable, but they are quite restricted in level. Half-elven 
+                characters who choose the thief class as one of their multi-roles are limited 
+                to the weaponry and armor of that class when operating as a thief. All 
+                earned experience is always divided evenly between the classes of the 
+                multi-classed character, even though the character is no longer able to 
+                gain levels in one or more of the classes. (See <style type="bold">CHARACTER CLASSES</style>, and 
+                consult the various classes for more detailed information pertaining to 
+                half-elven characters operating within the stated classes.)
+            </p> 
+            
+            <p>
+                Half-elven characters have a 30% resistance to sleep and charm spells (if the spells are cast upon
+                them, a percentile dice roll of 31% or better is required to allow the magic any 
+                chance of having an effect, and even then the <term ref="savingthrow">saving throw</term> against spells is allowed 
+                versus the charm spell).
+            </p> 
+            
+            <p>
+                All half-elven characters are able to speak the "common tongue" of men, 
+                their <term ref="alignmentlang">alignment language</term> (q.v.), and the following: elvish, gnome, 
+                halfling, goblin, hobgoblin, orcish, and gnoll. Half-elven characters of 
+                above 16 intelligence are able to learn one additional language for every 
+                point of intelligence above 16, so that a 17 intelligence indicates the 
+                character can learn one additional language, and an 18 intelligence 
+                indicates two languages can be learned in addition to those listed above.
+            </p> 
+            
+            <p>
+                Half-elves have the ability to see into the infra-red spectrum, so they are 
+                able to see up to 60' in darkness, noting varying degrees of heat radiation.
+            </p>
+            
+            <p>
+                Secret or concealed doors are difficult to hide from half-elves, just as they 
+                are noticeable by elves. Merely passing within 10' of a concealed door 
+                gives the half-elven character a 1 in 6 chance (16 213%) chance of spotting 
+                it. If the character is actively seeking to discover such doors, he or she has 
+                a 2 in 6 chance (33 1/3%) of spotting a secret door and o 3 in 6 chance 
+                (50%) of locating a concealed door.
+            </p>
+        </desc>
+<!-- arr: 
+        Not sure if we want to keep tooltips in a separate xml file, or if we should keep them on the same file 
+-->
+        <tooltips>
+            <tooltip id="cleric">
+                A character class associated with divine magic and religious duties
+            </tooltip>
+            <tooltip id="druid">
+                A character class associated with nature and nature-related magic
+            </tooltip>
+            <tooltip id="fighter">
+                A character class focused on combat and martial skills
+            </tooltip>
+            <tooltip id="ranger">
+                A character class associated with wilderness skills, tracking, and combat
+            </tooltip>
+            <tooltip id="magicuser">
+                A character class specializing in arcane magic
+            </tooltip>
+            <tooltip id="thief">
+                A character class specializing in skills such as stealth, picking locks,
+                and detecting traps
+            </tooltip>
+            <tooltip id="assassin">
+                A character class associated with stealth and killing targets
+            </tooltip>
+            <tooltip id="multiclass">
+                A character who advances in more than one class
+            </tooltip>
+            <tooltip id="savingthrow">
+                A roll made to resist or avoid certain effects
+            </tooltip>
+            <tooltip id="alignmentlang">
+                A language associated with a character's alignment
+            </tooltip>
+        </tooltips>
+</root>
