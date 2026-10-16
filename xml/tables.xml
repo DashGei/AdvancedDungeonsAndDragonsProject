@@ -14,40 +14,40 @@
         <td>5</td><td>Here or lower the character can only be a <spec class="magic-user">magic-user</spec></td>
     </tr>
     <tr>
-        <td>6</td><td>Minimum strength for a gnome, half-orc, or halfling character</td>
+        <td><spec minmax="minimum" race="gnome">6</spec></td><td>Minimum strength for a <spec >gnome</spec>, <spec race="half-orc">half-orc</spec>, or <spec race="halfling">halfling</spec> character</td>
     </tr>
         <tr>
-            <td>7</td><td></td>
+            <td>7</td><td>-</td>
         </tr>
         <tr>
-            <td>8</td><td>Minimum strength for a dwarf character</td>
+            <td>8</td><td><spec minmax="minimum">Minimum</spec> strength for a <spec race="dwarf">dwarf</spec> character</td>
         </tr>
         <tr>
-            <td>9</td><td>Minimum strength for a fighter character</td>
+            <td>9</td><td><spec minmax="minimum">Minimum</spec> strength for a <spec class="fighter">fighter</spec> character</td>
         </tr>
         <tr>
-            <td>10</td><td></td>
+            <td>10</td><td>-</td>
         </tr>
         <tr>
-            <td>11</td><td></td>
+            <td>11</td><td>-</td>
         </tr>
         <tr>
-            <td>12</td><td>Minimum strength for an assassin or paladin character</td>
+            <td>12</td><td><spec minmax="minimum">Minimum</spec> strength for an <spec class="assassin">assassin</spec> or <spec class="paladin">paladin</spec> character</td>
         </tr>
         <tr>
-            <td>13</td><td>Minimum strength for a ranger character</td>
+            <td>13</td><td><spec minmax="minimum">Minimum</spec> strength for a <spec class="ranger">ranger</spec> character</td>
         </tr>
         <tr>
-            <td>14</td><td>Maximum strength possible for a female halfling character</td>
+            <td>14</td><td><spec minmax="maximum">Maximum</spec> strength possible for a <spec sex="female">female</spec> <spec race="halfling">halfling</spec> character</td>
         </tr>
         <tr>
-            <td>15</td><td>Maximum strength possible for a female gnome character, minimum strength for a monk character</td>
+            <td>15</td><td><spec minmax="maximum">Maximum</spec> strength possible for a <spec sex="female">female</spec> <spec race="gnome">gnome</spec> character, <spec minmax="minimum">minimum</spec> strength for a <spec class="monk">monk</spec> character</td>
         </tr>
         <tr>
-            <td>16</td><td>Maximum strength possible for a female elf character</td>
+            <td>16</td><td><spec minmax="maximum">Maximum</spec> strength possible for a <spec sex="female">female</spec> <spec race="elf">elf</spec> character</td>
         </tr>
         <tr>
-            <td>17</td><td>Maximum strength possible for a female swarf or female half-elf or male halfling character</td>
+            <td>17</td><td><spec minmax="maximum">Maximum</spec> strength possible for a <spec sex="female">female</spec> dwarf or <spec sex="female">female</spec> <spec race="half-elf">half-elf</spec> or <spec sex="male">male</spec> <spec race="halfling">halfling</spec> character</td>
         </tr>
         <tr>
             <td>18</td><td>Maximum strength possible for all non-fighter characters</td>
