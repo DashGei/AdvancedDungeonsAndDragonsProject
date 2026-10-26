@@ -6,13 +6,30 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>AD&amp;D 1e Player's Handbook</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <publisher>Internet Archive</publisher>
+            <address>
+               <addrLine>300 Funston Ave</addrLine>
+               <addrLine>San Francisco, California</addrLine>
+               <addrLine>United States</addrLine>
+            </address>
+            <availability>
+               <p>Preserved by the Internet Archive and released under an open-source license</p>
+            </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <bibl>
+               <title>AD&amp;D Player's Handbook</title>
+               <author>Gary Gygax</author>
+               <publisher>Random House, Inc</publisher>
+               <address>
+                  <addrLine>TSR Hobbies, POB 756</addrLine>
+                  <addrLine>Lake Geneva, WI 53147</addrLine>
+               </address>
+               <date when="1978">1978</date>
+            </bibl>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
