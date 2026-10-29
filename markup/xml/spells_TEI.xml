@@ -38,34 +38,60 @@
          <div>
             <fs type="Spells">
                <f name="Fireball">
-                  <fs type="attr">
+                  <fs type="attributes">
                      <f name="level">
                         <numeric value="3"/>
                      </f>
                      <f name="range">
-                        <string>10 inches + 1 inch per level of spellcaster</string>
+                        <vColl org="set"> <!--nrg: "set" here is because the values are not necessarily in order as in a list-->
+                           <numeric value="10" n="base"/> <!--nrg: @n is being used here "in the specification of a standard reference system for the text" as per TEI-->
+                           <numeric value="1" n="scaling_val"/>
+                           <string n="scaling_type">per level of spellcaster</string>
+                           <string n="unit">inch</string>
+                        </vColl>
                      </f>
                      <f name="duration">
                         <string>Instantaneous</string>
                      </f>
                      <f name="aoe">
-                        <string>2 inch radius sphere</string>
+                        <vColl org="set">
+                           <numeric value="2" n="distance"/>
+                           <string n="unit">inch</string>
+                           <string n="shape">sphere</string> <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
+                        </vColl>
                      </f>
                      <f name="components">
-                        <string>Visual, Somatic, Material</string>
-                     </f>
-                     <f name="material_component">
-                        <string>A tiny ball composed of bat guano and sulphur</string>
+                        <vColl org="list"> <!--nrg: "list" here is because VSM are always listed in that order in the text-->
+                           <string n="verbal"/>
+                           <string n="somatic"/>
+                           <string n="material" resp="nrg">A tiny ball composed of bat guano and sulphur</string> <!--nrg: material erroneously not included in original component list-->
+                        </vColl>
                      </f>
                      <f name="cast_time">
-                        <string>3 segments</string>
+                        <vColl org="set">
+                           <numeric value="3"/>
+                           <string n="unit">segments</string>
+                        </vColl>
                      </f>
+                     <!-- 
+                     nrg: I'm not sure about how we should organize singular values like these ones?
+                          It feels inefficient to keep them all separate like this but I wanted to
+                          preserve the number of steps down from the Fireball feature for each value
+                     -->
                      <f name="saving_throw">
-                        <numeric value="1/2"/>
+                        <vColl org="set">
+                          <numeric value="1/2"/>
+                          <string n="effect">damage</string>
+                        </vColl>
                      </f>
                      <f name="roll">
-                        <string>1d6 per level of spellcaster</string>
-                     </f>
+                        <vColl org="set">
+                           <numeric value="1" max="6" n="d6"/> <!--nrg: I'm wondering if this could be a good way to convey dice? Not sure-->
+                           <numeric value="1" n="scaling_val"/>
+                           <string n="scaling_type">per level of spellcaster</string>
+                        </vColl>
+                        
+                     </f> <!--nrg: will need to be annotated later-->
                      <f name="desc"> A fireball is an explosive burst of flame, which detonates with
                         a low roar, and delivers damage proportionate to the level of the magic-user
                         who cast it, i.e. 1 six-sided die (d6) for each level of experience of the
