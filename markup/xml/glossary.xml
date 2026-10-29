@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>AD&amp;D 1e Player's Handbook</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Internet Archive</publisher>
+            <address>
+               <addrLine>300 Funston Ave</addrLine>
+               <addrLine>San Francisco, California</addrLine>
+               <addrLine>United States</addrLine>
+            </address>
+            <availability>
+               <p>Preserved by the Internet Archive and released under an open-source license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>AD&amp;D Player's Handbook</title>
+               <author>Gary Gygax</author>
+               <publisher>Random House, Inc</publisher>
+               <address>
+                  <addrLine>TSR Hobbies, POB 756</addrLine>
+                  <addrLine>Lake Geneva, WI 53147</addrLine>
+               </address>
+               <date when="1978">1978</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <list type="gloss">
+            <label>Strength</label>
+            <item xml:id="STR">
+               <p n="1"> Strength is a measure of muscle, endurance, and stamina combined. </p>
+               <p n="2"> For purposes of relating this ability to some reality, assume that a
+                  character with a strength of 3 is able to lift a maximum of 30 pounds weight above
+                  his or her head in a military press, while a character with 18 strength will be
+                  able to press 180 pounds in the same manner. </p>
+               <p n="3"> Strength is the forte of fighters, for they must be physically powerful in
+                  order to wear armor and wield heavy weapons. Therefore, strength is the major
+                  characteristic (or prime requisite) of fighters, and those fighters with strength
+                  of 16 or more gain a bonus of 10% of earned experience (explained later). </p>
+               <p n="4"> Furthermore, fighters with an 18 strength are entitled to roll percentile
+                  dice in order to generate a random number between 01 and 00 (100) to determine
+                  exceptional strength; exceptional strength increases hit probability and damage
+                  done when attacking, and it also increases the weight the character is able to
+                  carry without penalty for encumbrance, as well as increasing the character's
+                  ability to force open doors and similar portals. The tables below give complete
+                  information regarding the effects of strength. Note that only fighters are
+                  permitted to roll on the exceptional strength section of STRENGTH TABLE II:
+                  ABILITY ADJUSTMENTS. </p>
+            </item>
+            <label>Intelligence</label>
+            <item xml:id="INT">
+               <p n="1"> Intelligence is quite similar to what is currently known as intelligence
+                  quotient, but it also includes mnemonic ability, reasoning, and learning ability
+                  outside those measured by the written word. </p>
+               <p n="2">Intelligence dictates the number of languages in which the character is able
+                  to converse. Non-human characters typically are able to speak more languages than
+                  are human characters, but intelligence likewise affects the upper limit of their
+                  abilities as well, and there are racial limitations.</p>
+               <p n="3">Moreover, intelligence is the forte of magic-users, for they must be
+                  perspicacious in order to correctly understand magic and memorize spells. </p>
+               <p n="4">Therefore, intelligence is the major characteristic of magic-users, and
+                  those with intelligence of 16 or more gain a bonus of 10% of earned experience.
+                  Spells above 4th level cannot be learned by magic-users with minimal intelligence,
+                  and intelligence similarly dictates how many spells may be known and what level
+                  spells may be known, for only the highest intelligence is able to comprehend the
+                  mighty magics contained in 9th level spells.</p>
+            </item>
+            <label>Wisdom</label>
+            <item xml:id="WIS">
+               <p n="1">Wisdom is a composite term for the character’s enlightenment, judgement,
+                  wile, will power, and (to a certain extent) intuitiveness. It is of utmost
+                  importance to clerics, their major characteristic.</p>
+               <p n="2">It has a certain effect on saving throws against some magical attack
+                  modes.</p>
+               <p n="3">Those with wisdom of 16 or greater add 10% to earned experience.
+                  Furthermore, clerics with exceptional wisdom (16or greater) also gain bonus spells
+                  over and above the number they are normally able to use. The two tables which
+                  follow detail the information pertaining to the effects of wisdom. </p>
+            </item>
+            <label>Dexterity</label>
+            <item xml:id="DEX">
+               <p n="1">Dexterity encompasses a number of physical attributes including hand-eye
+                  coordination, agility, reflexes, precision, balance, and speed of movement.</p>
+               <p n="2">A high dexterity indicates superiority in all of the above attributes, while
+                  a low dexterity might well indicate that one of these attributes is actually
+                  superior, but that the others are very poor.</p>
+               <p n="3">Dexterity affects a11 characters with regord to initiative in attack, the
+                  projection of missiles from hand or other means, and in defensive measures.</p>
+               <p n="4">Dexterity is the maior characteristic of the thief class of character, and
+                  it affects their professional activities (such as picking pockets, opening lacks,
+                  and so forth) accordingly. Thieves with a dexterity ability score of 16 or more
+                  gain a bonus of 10% of earned experience. The two tables which follow outline the
+                  effects of dexterity on characters.</p>
+            </item>
+            <label>Constitution</label>
+            <item xml:id="CON">
+               <p n="1">Constitution is a term which encompasses the character’s physique, fitness,
+                  health, and resistance.</p>
+               <p n="2">Since constitution affects the character‘s hit dice and chances of surviving
+                  such great system shocks as being changed by magic spell or resurrected from the
+                  dead, it is of considerable importance to all classes. Constitution scores of
+                  above a certain number are necessary for becoming certain sub-classes of
+                  characters.</p>
+               <p n="3">It is of utmost importance to understand that a character’s initial
+                  constitution score is also the maximum number of times the character can be raised
+                  from the dead/resurrected, and that each such revivification reduces the
+                  character’s constitution score by 1. Although a character’s constitution can be
+                  restored to its former score, or even raised above this number, by magical means,
+                  this in no way alters the initio1 score limitation, nor does such magical change
+                  in constitution restore to the character additional chances for revivification.
+                  Thus, if a character has an initial constitution of 15, he or she can never be
+                  brought back to life by a raise dead or resurrection spell more often than 15
+                  times. Note that a rod of resurrection is considered the same as a spell of the
+                  same sort. The 16th death is final and irrevocable without use of some other
+                  magical means such as a wish.</p>
+            </item>
+            <label>Charisma</label>
+            <item xml:id="CHA">
+               <p n="1">Charisma is the measure of the character's combined physical attractiveness,
+                  persuasiveness, and personal magnetism.</p>
+               <p n="2">A generally non-beautiful character can have a very high charisma due to
+                  strong measures of the other two aspects of charisma. It is important to all
+                  characters, as it has an effect on dealings with others, principally non-player
+                  characters, mercenary hirelings, prospective retainers, and monsters.</p>
+               <p n="3">It absolutely dictates the total number of henchmen a character is able to
+                  retain. It affects loyalty of a11 hirelings and retainers. It is the key to
+                  leadership. The following table expresses the facts regarding charisma scores</p>
+            </item>
+         </list>
+      </body>
+   </text>
+</TEI>
