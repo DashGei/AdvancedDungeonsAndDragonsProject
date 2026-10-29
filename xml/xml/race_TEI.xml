@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Character Race</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Advanced Dungeons &amp; Dragons Players Handbook</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Text describing half-orc characters</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+   
+  <text>
+      <body>
+         <div type="fs">
+            <fs type="half-orc">
+               <f name="offspring">
+                  <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being typically orcish. However, some one-tenth of orc-human 
+                     mongrels are sufficiently non-orcish to pass for human</string>
+               </f>
+               <f name="level-requirement">
+                  <vColl org="set">
+                     <fs type="cleric">
+                        <f name="maximum-level">
+                           <numeric value="4"/>
+                        </f>
+                     </fs>
+                     <fs type="fighter">
+                        <f name="maximum-level">
+                           <numeric value="10"/>
+                        </f>
+                     </fs>
+                     <fs type="thief">
+                        <f name="maximum-level">
+                           <numeric value="8"/>
+                        </f>
+                     </fs>
+                     <fs type="assassin">
+                        <f name="class-available">
+                           <symbol value="yes"/>
+                        </f>
+                     </fs>
+                  </vColl>
+               </f>
+               <f name="multiclass-options">
+                  <vColl org="list">
+                     <string>cleric/fighter</string>
+                     <string>cleric/thief</string>
+                     <string>cleric/assassin</string>
+                     <string>fighter/thief</string>
+                     <string>fighter/assassin</string>
+                  </vColl>
+               </f>
+               <f name="armor-restrictions">
+                  <string> When playing a multi-classed character, the half-orc 
+                     must abide by the restrictions of the least favorable class with regard only 
+                     to armor.</string>
+               </f>
+               <f name="experience">
+                  <string>Experience is divided equally between
+                     the two classes.</string>
+               </f>
+               <f name="languages">
+                  <fs>
+                     <f name="known">
+                        <vColl org="list">
+                           <string>common tongue</string>
+                           <string>alignment language</string>
+                           <string>orcish</string>
+                        </vColl>
+                     </f>
+                     <f name="additional">
+                        <numeric value="2"/>
+                     </f>
+                  </fs>
+               </f>
+               <f name="infravision">
+                  <fs>
+                     <f name="status">
+                        <symbol value="present"/>
+                     </f>
+                     <f name="distance">
+                        <numeric value="60"/>
+                     </f>
+                     <f name="unit">
+                        <string>feet</string>
+                     </f>
+                  </fs>
+               </f>
+               <f name="ability-modifiers">
+                  <fs>
+                     <f name="strength">
+                        <numeric value="1"/>
+                     </f>
+                     <f name="constitution">
+                        <numeric value="1"/>
+                     </f>
+                     <f name="charisma">
+                        <numeric value="-2"/>
+                     </f>
+                     <f name="charisma-note">
+                        <string>The penalty is in regard to those non- 
+                           player character henchmen who are not themselves of half-orc race, so 
+                           the initial, unaltered, charisma ability score should be recorded.</string>
+                     </f>
+                  </fs>
+               </f>
+            </fs>
+         </div>
+      </body>
+  </text>
+</TEI>
