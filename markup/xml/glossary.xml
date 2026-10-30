@@ -36,36 +36,48 @@
    <text>
       <body>
          <list type="gloss">
+            <!--
+            nrg: All entries are marked with "resp" for now because all paragraph breaks are my decision and some text
+                 is moved around/deleted (like all the references to "the tables below") or compiled from multiple places for ease of reading.
+                 The idea behind marking numbered paragraphs is that you can have as detailed a tooltip as you desire:
+                 If you want just a basic summary, the first paragraph will do, if you want a little more, view one more, etc.
+                 ==========
+                 Text effects are retained using <emph>
+            -->
             <label>Strength</label>
-            <item xml:id="STR">
-               <p n="1"> Strength is a measure of muscle, endurance, and stamina combined. </p>
-               <p n="2"> For purposes of relating this ability to some reality, assume that a
+            <item xml:id="STR" resp="nrg" n="">
+               <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
+               <p n="1">Strength is a measure of muscle, endurance, and stamina combined.</p>
+               <p n="2">For purposes of relating this ability to some reality, assume that a
                   character with a strength of 3 is able to lift a maximum of 30 pounds weight above
                   his or her head in a military press, while a character with 18 strength will be
-                  able to press 180 pounds in the same manner. </p>
-               <p n="3"> Strength is the forte of fighters, for they must be physically powerful in
+                  able to press 180 pounds in the same manner.</p>
+               <p n="3">Strength is the forte of fighters, for they must be physically powerful in
                   order to wear armor and wield heavy weapons. Therefore, strength is the major
-                  characteristic (or prime requisite) of fighters, and those fighters with strength
-                  of 16 or more gain a bonus of 10% of earned experience (explained later). </p>
-               <p n="4"> Furthermore, fighters with an 18 strength are entitled to roll percentile
+                  characteristic <emph rend="italics">(or prime requisite)</emph> of fighters, and
+                  those fighters with strength of 16 or more gain a bonus of 10% of earned
+                  experience.</p>
+               <p n="4">Furthermore, fighters with an 18 strength are entitled to roll percentile
                   dice in order to generate a random number between 01 and 00 (100) to determine
-                  exceptional strength; exceptional strength increases hit probability and damage
-                  done when attacking, and it also increases the weight the character is able to
-                  carry without penalty for encumbrance, as well as increasing the character's
-                  ability to force open doors and similar portals. The tables below give complete
-                  information regarding the effects of strength. Note that only fighters are
-                  permitted to roll on the exceptional strength section of STRENGTH TABLE II:
-                  ABILITY ADJUSTMENTS. </p>
+                     <emph rend="italics">exceptional strength;</emph>
+               </p>
+               <p n="5">exceptional strength increases hit probability and damage done when
+                  attacking, and it also increases the weight the character is able to carry without
+                  penalty for encumbrance, as well as increasing the character's ability to force
+                  open doors and similar portals. The tables below give complete information
+                  regarding the effects of strength. Note that only fighters are permitted to roll
+                  on the exceptional strength section of STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
             </item>
             <label>Intelligence</label>
-            <item xml:id="INT">
+            <item xml:id="INT" resp="nrg">
                <p n="1"> Intelligence is quite similar to what is currently known as intelligence
                   quotient, but it also includes mnemonic ability, reasoning, and learning ability
                   outside those measured by the written word. </p>
                <p n="2">Intelligence dictates the number of languages in which the character is able
-                  to converse. Non-human characters typically are able to speak more languages than
-                  are human characters, but intelligence likewise affects the upper limit of their
-                  abilities as well, and there are racial limitations.</p>
+                  to converse. <emph rend="italics">Non-human characters typically are able to speak
+                     more languages than are human characters, but intelligence likewise affects the
+                     upper limit of their abilities as well, and there are racial
+                     limitations.</emph></p>
                <p n="3">Moreover, intelligence is the forte of magic-users, for they must be
                   perspicacious in order to correctly understand magic and memorize spells. </p>
                <p n="4">Therefore, intelligence is the major characteristic of magic-users, and
@@ -76,7 +88,7 @@
                   mighty magics contained in 9th level spells.</p>
             </item>
             <label>Wisdom</label>
-            <item xml:id="WIS">
+            <item xml:id="WIS" resp="nrg">
                <p n="1">Wisdom is a composite term for the character’s enlightenment, judgement,
                   wile, will power, and (to a certain extent) intuitiveness. It is of utmost
                   importance to clerics, their major characteristic.</p>
@@ -88,7 +100,7 @@
                   follow detail the information pertaining to the effects of wisdom. </p>
             </item>
             <label>Dexterity</label>
-            <item xml:id="DEX">
+            <item xml:id="DEX" resp="nrg">
                <p n="1">Dexterity encompasses a number of physical attributes including hand-eye
                   coordination, agility, reflexes, precision, balance, and speed of movement.</p>
                <p n="2">A high dexterity indicates superiority in all of the above attributes, while
@@ -96,14 +108,14 @@
                   superior, but that the others are very poor.</p>
                <p n="3">Dexterity affects a11 characters with regord to initiative in attack, the
                   projection of missiles from hand or other means, and in defensive measures.</p>
-               <p n="4">Dexterity is the maior characteristic of the thief class of character, and
-                  it affects their professional activities (such as picking pockets, opening lacks,
-                  and so forth) accordingly. Thieves with a dexterity ability score of 16 or more
-                  gain a bonus of 10% of earned experience. The two tables which follow outline the
-                  effects of dexterity on characters.</p>
+               <p n="4">Dexterity is the maior characteristic of the <emph rend="italics"
+                     >thief</emph> class of character, and it affects their professional activities
+                  (such as picking pockets, opening lacks, and so forth) accordingly. Thieves with a
+                  dexterity ability score of 16 or more gain a bonus of 10% of earned experience.
+                  The two tables which follow outline the effects of dexterity on characters.</p>
             </item>
             <label>Constitution</label>
-            <item xml:id="CON">
+            <item xml:id="CON" resp="nrg">
                <p n="1">Constitution is a term which encompasses the character’s physique, fitness,
                   health, and resistance.</p>
                <p n="2">Since constitution affects the character‘s hit dice and chances of surviving
@@ -125,7 +137,7 @@
                   magical means such as a wish.</p>
             </item>
             <label>Charisma</label>
-            <item xml:id="CHA">
+            <item xml:id="CHA" resp="nrg">
                <p n="1">Charisma is the measure of the character's combined physical attractiveness,
                   persuasiveness, and personal magnetism.</p>
                <p n="2">A generally non-beautiful character can have a very high charisma due to
@@ -135,6 +147,53 @@
                <p n="3">It absolutely dictates the total number of henchmen a character is able to
                   retain. It affects loyalty of a11 hirelings and retainers. It is the key to
                   leadership. The following table expresses the facts regarding charisma scores</p>
+            </item>
+            <label>Character Races</label>
+            <item xml:id="char_races" resp="nrg" n="13 15">
+               <!--nrg: Separated pages mean two disjointed pages-->
+               <p n="1">After a player has determined the abilities of his or her character, it is
+                  then time to decide of what racial stock the character is to be. For purposes of
+                  the game the racial stocks are limited to the following: <emph rend="italics"
+                     >dwarven, elven, gnome, half-elven, holfling, half-orc, and human.</emph></p>
+               <p n="2">Each racial stock has advantages and disadvantages, although in general
+                  human is superior to the others for reasons you will discover as you read on. </p>
+               <p n="3">The non- and part-human races must meet certain minimum ability scores, and
+                  some races have lower maximum possible scores as well. In order for your character
+                  to be of one of these races, these minimums and maximums must be met</p>
+               <p n="4">The Dungeon Master may have restrictions as to which races are allowed in
+                  the campaign due to the circumstances of the milieu.</p>
+            </item>
+            <label>Level</label>
+            <item xml:id="level" resp="nrg" n="8">
+               <p n="1">
+                  <emph rend="italics">An indication of character power:</emph> A player character
+                  begins the game at 1st level, i.e. the lowest possible level for a player
+                  character. The higher the level number, the more powerful the character is. </p>
+               <p n="2">
+                  <emph rend="italics">The depth of the dungeon complex beneath the ground:</emph>
+                  The 1st level of a dungeon is the first layer of the underground complex of
+                  tunnels, passages, rooms, chambers, and so forth. It is the 1st level beneath the
+                  ground. Beneath the 1st level is the 2nd, below that is the 3rd. 4th, Sth, etc.
+                  The higher the number, the lower the dungeon level (and the more hazardous its
+                  perils). </p>
+               <p n="3">
+                  <emph rend="italics">A measure of magic spell difficulty:</emph> The magic spells
+                  available to some classes of characters are graded by difficulty factor - which,
+                  incidentally, reflects the spells' effectiveness to some extent. 1st level spells
+                  are the basic ones available to beginning characters. They are generally the least
+                  powerful spells. Next come 2nd level spells, then come 3rd level spells, and so
+                  on. The highest level of any type of magic spell is 9th level, spells usable only
+                  by 18th level magic-users - lesser magic-users can possibly employ such spells
+                  under certain circumstances which are explained hereafter, but only at
+                  considerable risk. </p>
+               <p n="4">
+                  <emph rend="italics">A gauge of a "monster's" potential threat:</emph> Relatively
+                  weak creatures, monsters with few hit points, limited or non-existent magical
+                  abilities, those which do little damage when attacking, and those which have weak,
+                  or totally lack, venom are grouped together and called 1st level monsters.
+                  Slightly more powerful creatures are ordered into 2nd level, then comes 3rd. 4th,
+                  5th, and so on all the way up to 10th level (the highest, which includes the
+                  greatest monsters, demon princes, etc.) </p>
             </item>
          </list>
       </body>
