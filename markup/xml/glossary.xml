@@ -41,11 +41,15 @@
                  is moved around/deleted (like all the references to "the tables below") or compiled from multiple places for ease of reading.
                  The idea behind marking numbered paragraphs is that you can have as detailed a tooltip as you desire:
                  If you want just a basic summary, the first paragraph will do, if you want a little more, view one more, etc.
+                 I feel 5 or 6 is the maximum number of paragraph segments.
                  ==========
                  Text effects are retained using <emph>
+                 ==========
+                 Useful XPath:
+                 //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
             -->
             <label>Strength</label>
-            <item xml:id="STR" resp="nrg" n="">
+            <item xml:id="STR" resp="nrg" n="9">
                <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
                <p n="1">Strength is a measure of muscle, endurance, and stamina combined.</p>
                <p n="2">For purposes of relating this ability to some reality, assume that a
@@ -69,7 +73,7 @@
                   on the exceptional strength section of STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
             </item>
             <label>Intelligence</label>
-            <item xml:id="INT" resp="nrg">
+            <item xml:id="INT" resp="nrg" n="10">
                <p n="1"> Intelligence is quite similar to what is currently known as intelligence
                   quotient, but it also includes mnemonic ability, reasoning, and learning ability
                   outside those measured by the written word. </p>
@@ -88,7 +92,7 @@
                   mighty magics contained in 9th level spells.</p>
             </item>
             <label>Wisdom</label>
-            <item xml:id="WIS" resp="nrg">
+            <item xml:id="WIS" resp="nrg" n="11">
                <p n="1">Wisdom is a composite term for the character’s enlightenment, judgement,
                   wile, will power, and (to a certain extent) intuitiveness. It is of utmost
                   importance to clerics, their major characteristic.</p>
@@ -100,7 +104,7 @@
                   follow detail the information pertaining to the effects of wisdom. </p>
             </item>
             <label>Dexterity</label>
-            <item xml:id="DEX" resp="nrg">
+            <item xml:id="DEX" resp="nrg" n="11">
                <p n="1">Dexterity encompasses a number of physical attributes including hand-eye
                   coordination, agility, reflexes, precision, balance, and speed of movement.</p>
                <p n="2">A high dexterity indicates superiority in all of the above attributes, while
@@ -115,7 +119,7 @@
                   The two tables which follow outline the effects of dexterity on characters.</p>
             </item>
             <label>Constitution</label>
-            <item xml:id="CON" resp="nrg">
+            <item xml:id="CON" resp="nrg" n="12">
                <p n="1">Constitution is a term which encompasses the character’s physique, fitness,
                   health, and resistance.</p>
                <p n="2">Since constitution affects the character‘s hit dice and chances of surviving
@@ -137,7 +141,7 @@
                   magical means such as a wish.</p>
             </item>
             <label>Charisma</label>
-            <item xml:id="CHA" resp="nrg">
+            <item xml:id="CHA" resp="nrg" n="13">
                <p n="1">Charisma is the measure of the character's combined physical attractiveness,
                   persuasiveness, and personal magnetism.</p>
                <p n="2">A generally non-beautiful character can have a very high charisma due to
@@ -162,6 +166,50 @@
                   to be of one of these races, these minimums and maximums must be met</p>
                <p n="4">The Dungeon Master may have restrictions as to which races are allowed in
                   the campaign due to the circumstances of the milieu.</p>
+            </item>
+            <label>Advanced Dungeons &amp; Dragons</label>
+            <item xml:id="ADnD" resp="nrg" n="7">
+               <!--nrg: This entry is heavily cobbled together from snippets on this one page-->
+               <p n="1">The game is ideally for three or more adult players: one player must serve
+                  as the Dungeon Master, the shaper of the fantasy milieu, the "world" in which all
+                  action will take place. The other participants become adventurers by creating
+                  characters to explore the fantastic world and face all of its challenges -
+                  monsters, magic, and unnamed menaces. </p>
+               <p n="2">This new system provides the Dungeon Master with more and better material
+                  from which to devise the campaign milieu, and that in turn means a more
+                  interesting and imaginative game for the players. </p>
+               <p n="3">It will prove to be superior to any past offerings in the fantasy role
+                  playing game field. You will find it easy to integrate your existing character or
+                  characters into the new system, and at the same time the game will be both
+                  familiar and different.</p>
+               <p n="4">Clerics and fighters have been strengthened in relation to magic-users,
+                  although not overly so. Clerics have more and improved spell capability. Fighters
+                  are more effective in combat and have other new advantages as well. Still,
+                  magic-users are powerful indeed, and they have many new spells. None of these
+                  over-shadow thieves. </p>
+               <p n="5">Non-human races - dwarven, elven, gnome, half-elven, half-orcish, and
+                  halfling - are likewise included. Each offers some advantage and difference, yet has
+                  distinct disadvantages, just as human characters do.</p>
+            </item>
+            <label>Player Guidelines</label>
+            <item xml:id="play_guide" resp="nrg" n="2">
+               <p n="1"> Be an organized player; have the necessary information on your character
+                  readily at hand and available to the Dungeon Master. </p>
+               <p n="2"> Cooperate with the Dungeon Master and respect his decisions; if you
+                  disagree, present your viewpoint with deference to his position as game moderator.
+                  Be prepared to accept his decision as final and remember that not everything in
+                  the game will always go your way! </p>
+               <p n="3"> Cooperate with the other players and respect their right to participate.
+                  Encourage new and novice players by making suggestions and allowing them to make
+                  decisions on courses of action rather than dictating their responses. </p>
+               <p n="4"> If you are unable to participate in an adventure, give the other players
+                  and the DM some concrete guidelines if your character is going to be included in
+                  the adventuring group; be prepared to accept the consequences, good or bad, in any
+                  case. </p>
+               <p n="5"> Get in the spirit of the game, and use your persona to play with a special
+                  personality all its own. Interact with the other player characters and non-player
+                  characters to give the game campaign a unique flavor and "life". Above all, let
+                  yourself go, and enjoy! </p>
             </item>
             <label>Level</label>
             <item xml:id="level" resp="nrg" n="8">
