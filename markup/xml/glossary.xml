@@ -36,212 +36,404 @@
    <text>
       <body>
          <list type="gloss">
-            <!--
-            nrg: All entries are marked with "resp" for now because all paragraph breaks are my decision and some text
-                 is moved around/deleted (like all the references to "the tables below") or compiled from multiple places for ease of reading.
-                 The idea behind marking numbered paragraphs is that you can have as detailed a tooltip as you desire:
-                 If you want just a basic summary, the first paragraph will do, if you want a little more, view one more, etc.
-                 I feel 5 or 6 is the maximum number of paragraph segments.
-                 ==========
-                 Text effects are retained using <emph>
-                 ==========
-                 Useful XPath:
-                 //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
-            -->
-            <label>Strength</label>
-            <item xml:id="STR" resp="nrg" n="9">
-               <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
-               <p n="1">Strength is a measure of muscle, endurance, and stamina combined.</p>
-               <p n="2">For purposes of relating this ability to some reality, assume that a
-                  character with a strength of 3 is able to lift a maximum of 30 pounds weight above
-                  his or her head in a military press, while a character with 18 strength will be
-                  able to press 180 pounds in the same manner.</p>
-               <p n="3">Strength is the forte of fighters, for they must be physically powerful in
-                  order to wear armor and wield heavy weapons. Therefore, strength is the major
-                  characteristic <emph rend="italics">(or prime requisite)</emph> of fighters, and
-                  those fighters with strength of 16 or more gain a bonus of 10% of earned
-                  experience.</p>
-               <p n="4">Furthermore, fighters with an 18 strength are entitled to roll percentile
-                  dice in order to generate a random number between 01 and 00 (100) to determine
-                     <emph rend="italics">exceptional strength;</emph>
-               </p>
-               <p n="5">exceptional strength increases hit probability and damage done when
-                  attacking, and it also increases the weight the character is able to carry without
-                  penalty for encumbrance, as well as increasing the character's ability to force
-                  open doors and similar portals. The tables below give complete information
-                  regarding the effects of strength. Note that only fighters are permitted to roll
-                  on the exceptional strength section of STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
+            <label>Character Stats</label>
+            <!--nrg: These will be categories of tooltips displayed on the popup-->
+            <item>
+               <list xml:id="char_stats" type="gloss">
+                  <!--
+                    nrg: All entries are marked with "resp" because all paragraph breaks are my decision and some text
+                    is moved around/deleted (like all the references to "the tables below") or compiled from multiple places for ease of reading.
+                    The idea behind marking numbered paragraphs is that you can have as detailed a tooltip as you desire:
+                    If you want just a basic summary, the first paragraph will do, if you want a little more, view one more, etc.
+                    I feel 5 or 6 is the maximum number of paragraph segments.
+                    ==========
+                    Text effects are retained using <emph>
+                    ==========
+                    Useful XPath:
+                    //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
+               -->
+                  <label>Strength</label>
+                  <item xml:id="STR" resp="nrg" n="9">
+                     <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
+                     <p n="1">Strength is a measure of muscle, endurance, and stamina combined.</p>
+                     <p n="2">For purposes of relating this ability to some reality, assume that a
+                        character with a strength of 3 is able to lift a maximum of 30 pounds weight
+                        above his or her head in a military press, while a character with 18
+                        strength will be able to press 180 pounds in the same manner.</p>
+                     <p n="3">Strength is the forte of fighters, for they must be physically
+                        powerful in order to wear armor and wield heavy weapons. Therefore, strength
+                        is the major characteristic <emph rend="italics">(or prime requisite)</emph>
+                        of fighters, and those fighters with strength of 16 or more gain a bonus of
+                        10% of earned experience.</p>
+                     <p n="4">Furthermore, fighters with an 18 strength are entitled to roll
+                        percentile dice in order to generate a random number between 01 and 00 (100)
+                        to determine <emph rend="italics">exceptional strength;</emph>
+                     </p>
+                     <p n="5">exceptional strength increases hit probability and damage done when
+                        attacking, and it also increases the weight the character is able to carry
+                        without penalty for encumbrance, as well as increasing the character's
+                        ability to force open doors and similar portals. The tables below give
+                        complete information regarding the effects of strength. Note that only
+                        fighters are permitted to roll on the exceptional strength section of
+                        STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
+                  </item>
+                  <label>Intelligence</label>
+                  <item xml:id="INT" resp="nrg" n="10">
+                     <p n="1"> Intelligence is quite similar to what is currently known as
+                        intelligence quotient, but it also includes mnemonic ability, reasoning, and
+                        learning ability outside those measured by the written word. </p>
+                     <p n="2">Intelligence dictates the number of languages in which the character
+                        is able to converse. <emph rend="italics">Non-human characters typically are
+                           able to speak more languages than are human characters, but intelligence
+                           likewise affects the upper limit of their abilities as well, and there
+                           are racial limitations.</emph></p>
+                     <p n="3">Moreover, intelligence is the forte of magic-users, for they must be
+                        perspicacious in order to correctly understand magic and memorize spells. </p>
+                     <p n="4">Therefore, intelligence is the major characteristic of magic-users,
+                        and those with intelligence of 16 or more gain a bonus of 10% of earned
+                        experience. Spells above 4th level cannot be learned by magic-users with
+                        minimal intelligence, and intelligence similarly dictates how many spells
+                        may be known and what level spells may be known, for only the highest
+                        intelligence is able to comprehend the mighty magics contained in 9th level
+                        spells.</p>
+                  </item>
+                  <label>Wisdom</label>
+                  <item xml:id="WIS" resp="nrg" n="11">
+                     <p n="1">Wisdom is a composite term for the character’s enlightenment,
+                        judgement, wile, will power, and (to a certain extent) intuitiveness. It is
+                        of utmost importance to clerics, their major characteristic.</p>
+                     <p n="2">It has a certain effect on saving throws against some magical attack
+                        modes.</p>
+                     <p n="3">Those with wisdom of 16 or greater add 10% to earned experience.
+                        Furthermore, clerics with exceptional wisdom (16or greater) also gain bonus
+                        spells over and above the number they are normally able to use. The two
+                        tables which follow detail the information pertaining to the effects of
+                        wisdom. </p>
+                  </item>
+                  <label>Dexterity</label>
+                  <item xml:id="DEX" resp="nrg" n="11">
+                     <p n="1">Dexterity encompasses a number of physical attributes including
+                        hand-eye coordination, agility, reflexes, precision, balance, and speed of
+                        movement.</p>
+                     <p n="2">A high dexterity indicates superiority in all of the above attributes,
+                        while a low dexterity might well indicate that one of these attributes is
+                        actually superior, but that the others are very poor.</p>
+                     <p n="3">Dexterity affects a11 characters with regord to initiative in attack,
+                        the projection of missiles from hand or other means, and in defensive
+                        measures.</p>
+                     <p n="4">Dexterity is the maior characteristic of the <emph rend="italics"
+                           >thief</emph> class of character, and it affects their professional
+                        activities (such as picking pockets, opening lacks, and so forth)
+                        accordingly. Thieves with a dexterity ability score of 16 or more gain a
+                        bonus of 10% of earned experience. The two tables which follow outline the
+                        effects of dexterity on characters.</p>
+                  </item>
+                  <label>Constitution</label>
+                  <item xml:id="CON" resp="nrg" n="12">
+                     <p n="1">Constitution is a term which encompasses the character’s physique,
+                        fitness, health, and resistance.</p>
+                     <p n="2">Since constitution affects the character‘s hit dice and chances of
+                        surviving such great system shocks as being changed by magic spell or
+                        resurrected from the dead, it is of considerable importance to all classes.
+                        Constitution scores of above a certain number are necessary for becoming
+                        certain sub-classes of characters.</p>
+                     <p n="3">It is of utmost importance to understand that a character’s initial
+                        constitution score is also the maximum number of times the character can be
+                        raised from the dead/resurrected, and that each such revivification reduces
+                        the character’s constitution score by 1. Although a character’s constitution
+                        can be restored to its former score, or even raised above this number, by
+                        magical means, this in no way alters the initio1 score limitation, nor does
+                        such magical change in constitution restore to the character additional
+                        chances for revivification. Thus, if a character has an initial constitution
+                        of 15, he or she can never be brought back to life by a raise dead or
+                        resurrection spell more often than 15 times. Note that a rod of resurrection
+                        is considered the same as a spell of the same sort. The 16th death is final
+                        and irrevocable without use of some other magical means such as a wish.</p>
+                  </item>
+                  <label>Charisma</label>
+                  <item xml:id="CHA" resp="nrg" n="13">
+                     <p n="1">Charisma is the measure of the character's combined physical
+                        attractiveness, persuasiveness, and personal magnetism.</p>
+                     <p n="2">A generally non-beautiful character can have a very high charisma due
+                        to strong measures of the other two aspects of charisma. It is important to
+                        all characters, as it has an effect on dealings with others, principally
+                        non-player characters, mercenary hirelings, prospective retainers, and
+                        monsters.</p>
+                     <p n="3">It absolutely dictates the total number of henchmen a character is
+                        able to retain. It affects loyalty of a11 hirelings and retainers. It is the
+                        key to leadership. The following table expresses the facts regarding
+                        charisma scores</p>
+                  </item>
+               </list>
             </item>
-            <label>Intelligence</label>
-            <item xml:id="INT" resp="nrg" n="10">
-               <p n="1"> Intelligence is quite similar to what is currently known as intelligence
-                  quotient, but it also includes mnemonic ability, reasoning, and learning ability
-                  outside those measured by the written word. </p>
-               <p n="2">Intelligence dictates the number of languages in which the character is able
-                  to converse. <emph rend="italics">Non-human characters typically are able to speak
-                     more languages than are human characters, but intelligence likewise affects the
-                     upper limit of their abilities as well, and there are racial
-                     limitations.</emph></p>
-               <p n="3">Moreover, intelligence is the forte of magic-users, for they must be
-                  perspicacious in order to correctly understand magic and memorize spells. </p>
-               <p n="4">Therefore, intelligence is the major characteristic of magic-users, and
-                  those with intelligence of 16 or more gain a bonus of 10% of earned experience.
-                  Spells above 4th level cannot be learned by magic-users with minimal intelligence,
-                  and intelligence similarly dictates how many spells may be known and what level
-                  spells may be known, for only the highest intelligence is able to comprehend the
-                  mighty magics contained in 9th level spells.</p>
+            <label>Races</label>
+            <item>
+               <list>
+                  <label>Dwarves</label>
+                  <item xml:id="dwarves" resp="nrg" n="15 16">
+                     <p n="1"> The race of dwarves typically dwells in hilly or mountainous regions.
+                        As player characters, both dwarves and their cousins the "mountain dwarves"
+                        can be considered. </p>
+                     <p n="2"> Because of their very nature, dwarves are non-magical and do not ever
+                        use magical spells. However, this nature gives them a bonus with regard to
+                        their saving throws against attacks by magic wands, staves, rods and spells.
+                        This bonus is + 1 for every 3% points of constitution ability. </p>
+                     <p n="3">Similarly, dwarves have exceptional constitutional strength with
+                        regard to toxic substances, ingested or injected. Therefore, a11 dwarven
+                        characters make saving throws against poison in the same manner and with the
+                        same bonuses as they do against magical attacks from wands, staves, rods,
+                        and spells.</p>
+                     <p n="4">All dwarves are able to speak the following languages: dwarven, gnome,
+                        goblin, kobold, and orcish; in addition, dwarven characters are able to
+                        speak the "common tongue" of all humankind. However, except for their
+                        alignment language, they are unable to learn more than two additional
+                        languages regardless of their intelligence ability.</p>
+                     <p n="5">Dwarves are able to see radiation in the infra-red spectrum, so they
+                        can see up to 60' in the dark noting varying degrees of heat radiation. This
+                        ability is known as "infravision".</p>
+                     <p n="6"> Dwarves are miners of great skill. They are able to detect the
+                        following facts when within 10' or less of the particular phenomenon (except
+                        determination of approximate depth, which can be done at any distance):
+                        Detect grade or slope in passage, upwards or downwards (75% probability),
+                        Detect new construction or passage/tunnel (75% probability), detect sliding
+                        or shifting walls or rooms (66 2/3% probability), detect traps involving
+                        pits, falling blocks and other stonework (50% probability), determine
+                        approximote depth underground (50% probability) Note that the dwarven
+                        character must be actively seeking to determine the phenomenon in question
+                        in order to be able to determine the answer; the information does not simply
+                        spring to mind unbidden.</p>
+                     <p n="7">In melee combat, dwarves add 1 to their dice rolls to hit opponents
+                        who are half-orcs, goblins, hobgoblins, or orcs. When being attacked by
+                        ogres, trolls, ogre magi, giants, and/or titans, dwarves subtract 4 from
+                        their opponents' "to hit" dice rolls because of the dwarves' small size and
+                        combat ability against these much bigger creatures.</p>
+                     <p n="8">Dwarven characters get a bonus of 1 added to their initial
+                        constitution ability, and a penalty of 1 on their charisma score due to
+                        racial characteristics. It is very important to note the actual charisma
+                        score prior to racial adjustment, however, for dwarven characters do not
+                        suffer charisma penalties, nor are they limited to a 16 charisma maximum
+                        with regard to their own race. </p>
+                     <p n="9">With regard to non-dwarven henchmen, the character is limited to a
+                        maximum of 8, but with regard to dwarves the character has a score of 18
+                        charisma, so up to 15 henchmen would serve the character if the additional
+                        servitors (over and above 8) were themselves dwarves. </p>
+                  </item>
+               </list>
             </item>
-            <label>Wisdom</label>
-            <item xml:id="WIS" resp="nrg" n="11">
-               <p n="1">Wisdom is a composite term for the character’s enlightenment, judgement,
-                  wile, will power, and (to a certain extent) intuitiveness. It is of utmost
-                  importance to clerics, their major characteristic.</p>
-               <p n="2">It has a certain effect on saving throws against some magical attack
-                  modes.</p>
-               <p n="3">Those with wisdom of 16 or greater add 10% to earned experience.
-                  Furthermore, clerics with exceptional wisdom (16or greater) also gain bonus spells
-                  over and above the number they are normally able to use. The two tables which
-                  follow detail the information pertaining to the effects of wisdom. </p>
+            <label>Game Descriptions</label>
+            <!--nrg: maybe bad name-->
+            <item>
+               <list xml:id="game_desc" type="gloss">
+                  <label>Advanced Dungeons &amp; Dragons</label>
+                  <item xml:id="ADnD" resp="nrg" n="7">
+                     <!--nrg: This entry is heavily cobbled together from snippets on this one page-->
+                     <p n="1">The game is ideally for three or more adult players: one player must
+                        serve as the Dungeon Master, the shaper of the fantasy milieu, the "world"
+                        in which all action will take place. The other participants become
+                        adventurers by creating characters to explore the fantastic world and face
+                        all of its challenges - monsters, magic, and unnamed menaces. </p>
+                     <p n="2">This new system provides the Dungeon Master with more and better
+                        material from which to devise the campaign milieu, and that in turn means a
+                        more interesting and imaginative game for the players. </p>
+                     <p n="3">It will prove to be superior to any past offerings in the fantasy role
+                        playing game field. You will find it easy to integrate your existing
+                        character or characters into the new system, and at the same time the game
+                        will be both familiar and different.</p>
+                     <p n="4">Clerics and fighters have been strengthened in relation to
+                        magic-users, although not overly so. Clerics have more and improved spell
+                        capability. Fighters are more effective in combat and have other new
+                        advantages as well. Still, magic-users are powerful indeed, and they have
+                        many new spells. None of these over-shadow thieves. </p>
+                     <p n="5">Non-human races - dwarven, elven, gnome, half-elven, half-orcish, and
+                        halfling - are likewise included. Each offers some advantage and difference,
+                        yet has distinct disadvantages, just as human characters do.</p>
+                  </item>
+                  <label>Player Guidelines</label>
+                  <item xml:id="play_guide" resp="nrg" n="2">
+                     <p n="1"> Be an organized player; have the necessary information on your
+                        character readily at hand and available to the Dungeon Master. </p>
+                     <p n="2"> Cooperate with the Dungeon Master and respect his decisions; if you
+                        disagree, present your viewpoint with deference to his position as game
+                        moderator. Be prepared to accept his decision as final and remember that not
+                        everything in the game will always go your way! </p>
+                     <p n="3"> Cooperate with the other players and respect their right to
+                        participate. Encourage new and novice players by making suggestions and
+                        allowing them to make decisions on courses of action rather than dictating
+                        their responses. </p>
+                     <p n="4"> If you are unable to participate in an adventure, give the other
+                        players and the DM some concrete guidelines if your character is going to be
+                        included in the adventuring group; be prepared to accept the consequences,
+                        good or bad, in any case. </p>
+                     <p n="5"> Get in the spirit of the game, and use your persona to play with a
+                        special personality all its own. Interact with the other player characters
+                        and non-player characters to give the game campaign a unique flavor and
+                        "life". Above all, let yourself go, and enjoy! </p>
+                  </item>
+
+               </list>
             </item>
-            <label>Dexterity</label>
-            <item xml:id="DEX" resp="nrg" n="11">
-               <p n="1">Dexterity encompasses a number of physical attributes including hand-eye
-                  coordination, agility, reflexes, precision, balance, and speed of movement.</p>
-               <p n="2">A high dexterity indicates superiority in all of the above attributes, while
-                  a low dexterity might well indicate that one of these attributes is actually
-                  superior, but that the others are very poor.</p>
-               <p n="3">Dexterity affects a11 characters with regord to initiative in attack, the
-                  projection of missiles from hand or other means, and in defensive measures.</p>
-               <p n="4">Dexterity is the maior characteristic of the <emph rend="italics"
-                     >thief</emph> class of character, and it affects their professional activities
-                  (such as picking pockets, opening lacks, and so forth) accordingly. Thieves with a
-                  dexterity ability score of 16 or more gain a bonus of 10% of earned experience.
-                  The two tables which follow outline the effects of dexterity on characters.</p>
+            <label>Character Building</label>
+            <item>
+               <list xml:id="char_build" type="gloss">
+                  <label>Level</label>
+                  <item xml:id="level" resp="nrg" n="8">
+                     <p n="1">
+                        <emph rend="italics">An indication of character power:</emph> A player
+                        character begins the game at 1st level, i.e. the lowest possible level for a
+                        player character. The higher the level number, the more powerful the
+                        character is. </p>
+                     <p n="2">
+                        <emph rend="italics">The depth of the dungeon complex beneath the
+                           ground:</emph> The 1st level of a dungeon is the first layer of the
+                        underground complex of tunnels, passages, rooms, chambers, and so forth. It
+                        is the 1st level beneath the ground. Beneath the 1st level is the 2nd, below
+                        that is the 3rd. 4th, Sth, etc. The higher the number, the lower the dungeon
+                        level (and the more hazardous its perils). </p>
+                     <p n="3">
+                        <emph rend="italics">A measure of magic spell difficulty:</emph> The magic
+                        spells available to some classes of characters are graded by difficulty
+                        factor - which, incidentally, reflects the spells' effectiveness to some
+                        extent. 1st level spells are the basic ones available to beginning
+                        characters. They are generally the least powerful spells. Next come 2nd
+                        level spells, then come 3rd level spells, and so on. The highest level of
+                        any type of magic spell is 9th level, spells usable only by 18th level
+                        magic-users - lesser magic-users can possibly employ such spells under
+                        certain circumstances which are explained hereafter, but only at
+                        considerable risk. </p>
+                     <p n="4">
+                        <emph rend="italics">A gauge of a "monster's" potential threat:</emph>
+                        Relatively weak creatures, monsters with few hit points, limited or
+                        non-existent magical abilities, those which do little damage when attacking,
+                        and those which have weak, or totally lack, venom are grouped together and
+                        called 1st level monsters. Slightly more powerful creatures are ordered into
+                        2nd level, then comes 3rd. 4th, 5th, and so on all the way up to 10th level
+                        (the highest, which includes the greatest monsters, demon princes, etc.)
+                     </p>
+                  </item>
+                  <label>Character Races</label>
+                  <item xml:id="char_races" resp="nrg" n="13 15">
+                     <!--nrg: Separated pages mean two disjointed pages-->
+                     <p n="1">After a player has determined the abilities of his or her character,
+                        it is then time to decide of what racial stock the character is to be. For
+                        purposes of the game the racial stocks are limited to the following: <emph
+                           rend="italics">dwarven, elven, gnome, half-elven, holfling, half-orc, and
+                           human.</emph></p>
+                     <p n="2">Each racial stock has advantages and disadvantages, although in
+                        general human is superior to the others for reasons you will discover as you
+                        read on. </p>
+                     <p n="3">The non- and part-human races must meet certain minimum ability
+                        scores, and some races have lower maximum possible scores as well. In order
+                        for your character to be of one of these races, these minimums and maximums
+                        must be met</p>
+                     <p n="4">The Dungeon Master may have restrictions as to which races are allowed
+                        in the campaign due to the circumstances of the milieu.</p>
+                  </item>
+               </list>
             </item>
-            <label>Constitution</label>
-            <item xml:id="CON" resp="nrg" n="12">
-               <p n="1">Constitution is a term which encompasses the character’s physique, fitness,
-                  health, and resistance.</p>
-               <p n="2">Since constitution affects the character‘s hit dice and chances of surviving
-                  such great system shocks as being changed by magic spell or resurrected from the
-                  dead, it is of considerable importance to all classes. Constitution scores of
-                  above a certain number are necessary for becoming certain sub-classes of
-                  characters.</p>
-               <p n="3">It is of utmost importance to understand that a character’s initial
-                  constitution score is also the maximum number of times the character can be raised
-                  from the dead/resurrected, and that each such revivification reduces the
-                  character’s constitution score by 1. Although a character’s constitution can be
-                  restored to its former score, or even raised above this number, by magical means,
-                  this in no way alters the initio1 score limitation, nor does such magical change
-                  in constitution restore to the character additional chances for revivification.
-                  Thus, if a character has an initial constitution of 15, he or she can never be
-                  brought back to life by a raise dead or resurrection spell more often than 15
-                  times. Note that a rod of resurrection is considered the same as a spell of the
-                  same sort. The 16th death is final and irrevocable without use of some other
-                  magical means such as a wish.</p>
+
+            <label>Combat Descriptions</label>
+            <item>
+               <list xml:id="combat_desc" type="gloss">
+                  <label>Combat</label>
+                  <item xml:id="combat" resp="nrg" n="104 105">
+                     <p n="1">This broad heading covers all forms of attack and fighting. It
+                        includes clerical turning undead, magical control, spell attacks, breath and
+                        gaze weapon attacks, magical device attacks, missile discharge, and melee
+                        (hand-to-hand combat).</p>
+                     <p n="2">Combat occurs when communication and negotiation are undesired or
+                        unsuccessful. The clever character does not attack first and ask questions
+                        (of self or monster) later, but every adventure will be likely to have
+                        combat for him or her at some point</p>
+                     <p n="3">Most magical combat and breath weapons do not require the attacker to
+                        determine if the weapon hits, but the target creatures are allowed saving
+                        throws to see if they avoided the attack or at least partially negated
+                        it.</p>
+                     <p n="4">Other attacks require a "to hit" dice roll by the attackers, ond
+                        damage is always scored if the hit is made. A further saving throw might be
+                        required if the hit scored has other possible effects such as death due to
+                        poison, parolyzation, etc. Whether or not a hit is scored depends on the
+                        power of the attacker and the armor class of the defender. </p>
+                  </item>
+                  <label>Initiative</label>
+                  <item xml:id="initiative" resp="nrg" n="104">
+                     <p n="1">The initiative factor affects who can do what and when during the
+                        course of an encounter of any sort.</p>
+                     <p n="2">Initiative allows one group, the party or the monster(s), to begin
+                        some course of action prior to the other group.</p>
+                     <p n="3">The initiative check is typically made with 2 six-sided dice, ld6 for
+                        the party, and another of a different size or color for the creatures
+                        encountered. This check is made each round of play where first action is a
+                        factor.</p>
+                     <p n="4">Actions affected by initiative are many and include slamming a door,
+                        fleeing, moving to grapple or melee, a call for a truce or surrender, firing
+                        wands, discharging missiles, beginning a spell, and so on.</p>
+                     <p n="5">Because a round is a full minute long, dexterity seldom is a factor in
+                        the determination of which side acts first. However, if one group is slowed
+                        or hasted, or one or more members of the group are, the initiative will
+                        always go to the non-slowed or hasted side. In most other cases, the group
+                        with the higher die score will always act first.</p>
+                     <p n="6">Surprise obviates the need for initiative checks, as the surprising
+                        party has complete freedom of action for a time. However, surprise
+                        eventually wanes, and then, just as in other circumstances, the relative
+                        weight of action must be determined.</p>
+                  </item>
+                  <label>Saving Throws</label>
+                  <item xml:id="saving_throws" resp="nrg" n="105">
+                     <p n="1">The chance to avoid or partially negate magical and breath attack
+                        forms is known as the save.</p>
+                     <p n="2">Note that magic items and even normal items and weapons must be saved
+                        for due to such attacks, falls or blows.</p>
+                     <p n="3">Consider the fate of a cloak when exposed to dragon fire, a suit of
+                        magic armor struck by a lightning bolt, or a magic hammer flying through a
+                        cone of cold prior to striking its target.</p>
+                     <p n="4">Your Dungeon Master has tables which show the saving throw scores for
+                        these attack forms, by class of character, by level of experience in class.
+                        These base numbers are modified by the power of the attack, and by magical
+                        protections and character class and race.</p>
+                  </item>
+                  <label>Armor Class</label>
+                  <item xml:id="armor_class" resp="nrg" n="105">
+                     <p n="1"> The type of armor worn, the inclusion of a shield, magical factors,
+                        and dexterity are inclusions in overall armor class. </p>
+                     <p n="2"> The size ratio is also important at times, i.e. a dwarf adds 4
+                        factors to his armor class if his opponent is a giant. For example, splint
+                        mail is armor class 4, and if a shield is added the armor class becomes 3,
+                        but suppose it is a magical + 1 shield; then armor class becomes 2. </p>
+                     <p n="3">Now assume that the character has a <emph rend="italics">displacer
+                           cloak</emph>, so the armor class becomes 0, and furthermore, because the
+                        character has a 16 dexterity, a final bonus of +2 is given, and the armor
+                        class of this character is -2. If the character is a dwarf, a giant
+                        attempting to hit him or her would have to hit AC -6, because of the size
+                        differential penalty. </p>
+                  </item>
+                  <label>First Strike</label>
+                  <!--nrg: much of this is useless and Dash said I should stop encoding them-->
+                  <item xml:id="first_strike" resp="nrg" n="105">
+                     <p n="1">The 1 minute melee round assumes much activity - rushes, retreats,
+                        feints, parries, checks, and so on. Once during this period each combatant
+                        has the opportunity to get a real blow in.</p>
+                     <p n="2">Usually this is indicated by initiative, but sometimes other
+                        circumstances will prevail. High level fighters get multiple blows per
+                        round, so they will usually strike first and last in a round. Slowed
+                        creatures always strike last. Hasted/speeded creatures strike first. A solid
+                        formation of creatures with long weapons will strike opponents with shorter
+                        weapons first, a rushing opponent will be struck first by a pole arm/spear
+                        set in its path. </p>
+                     <p n="3">Your DM will adjudicate such matters with common sense, When important
+                        single combats occur, then dexterities and weapons factors will be used to
+                        determine the order and number of strikes in a round.</p>
+                  </item>
+               </list>
             </item>
-            <label>Charisma</label>
-            <item xml:id="CHA" resp="nrg" n="13">
-               <p n="1">Charisma is the measure of the character's combined physical attractiveness,
-                  persuasiveness, and personal magnetism.</p>
-               <p n="2">A generally non-beautiful character can have a very high charisma due to
-                  strong measures of the other two aspects of charisma. It is important to all
-                  characters, as it has an effect on dealings with others, principally non-player
-                  characters, mercenary hirelings, prospective retainers, and monsters.</p>
-               <p n="3">It absolutely dictates the total number of henchmen a character is able to
-                  retain. It affects loyalty of a11 hirelings and retainers. It is the key to
-                  leadership. The following table expresses the facts regarding charisma scores</p>
-            </item>
-            <label>Character Races</label>
-            <item xml:id="char_races" resp="nrg" n="13 15">
-               <!--nrg: Separated pages mean two disjointed pages-->
-               <p n="1">After a player has determined the abilities of his or her character, it is
-                  then time to decide of what racial stock the character is to be. For purposes of
-                  the game the racial stocks are limited to the following: <emph rend="italics"
-                     >dwarven, elven, gnome, half-elven, holfling, half-orc, and human.</emph></p>
-               <p n="2">Each racial stock has advantages and disadvantages, although in general
-                  human is superior to the others for reasons you will discover as you read on. </p>
-               <p n="3">The non- and part-human races must meet certain minimum ability scores, and
-                  some races have lower maximum possible scores as well. In order for your character
-                  to be of one of these races, these minimums and maximums must be met</p>
-               <p n="4">The Dungeon Master may have restrictions as to which races are allowed in
-                  the campaign due to the circumstances of the milieu.</p>
-            </item>
-            <label>Advanced Dungeons &amp; Dragons</label>
-            <item xml:id="ADnD" resp="nrg" n="7">
-               <!--nrg: This entry is heavily cobbled together from snippets on this one page-->
-               <p n="1">The game is ideally for three or more adult players: one player must serve
-                  as the Dungeon Master, the shaper of the fantasy milieu, the "world" in which all
-                  action will take place. The other participants become adventurers by creating
-                  characters to explore the fantastic world and face all of its challenges -
-                  monsters, magic, and unnamed menaces. </p>
-               <p n="2">This new system provides the Dungeon Master with more and better material
-                  from which to devise the campaign milieu, and that in turn means a more
-                  interesting and imaginative game for the players. </p>
-               <p n="3">It will prove to be superior to any past offerings in the fantasy role
-                  playing game field. You will find it easy to integrate your existing character or
-                  characters into the new system, and at the same time the game will be both
-                  familiar and different.</p>
-               <p n="4">Clerics and fighters have been strengthened in relation to magic-users,
-                  although not overly so. Clerics have more and improved spell capability. Fighters
-                  are more effective in combat and have other new advantages as well. Still,
-                  magic-users are powerful indeed, and they have many new spells. None of these
-                  over-shadow thieves. </p>
-               <p n="5">Non-human races - dwarven, elven, gnome, half-elven, half-orcish, and
-                  halfling - are likewise included. Each offers some advantage and difference, yet has
-                  distinct disadvantages, just as human characters do.</p>
-            </item>
-            <label>Player Guidelines</label>
-            <item xml:id="play_guide" resp="nrg" n="2">
-               <p n="1"> Be an organized player; have the necessary information on your character
-                  readily at hand and available to the Dungeon Master. </p>
-               <p n="2"> Cooperate with the Dungeon Master and respect his decisions; if you
-                  disagree, present your viewpoint with deference to his position as game moderator.
-                  Be prepared to accept his decision as final and remember that not everything in
-                  the game will always go your way! </p>
-               <p n="3"> Cooperate with the other players and respect their right to participate.
-                  Encourage new and novice players by making suggestions and allowing them to make
-                  decisions on courses of action rather than dictating their responses. </p>
-               <p n="4"> If you are unable to participate in an adventure, give the other players
-                  and the DM some concrete guidelines if your character is going to be included in
-                  the adventuring group; be prepared to accept the consequences, good or bad, in any
-                  case. </p>
-               <p n="5"> Get in the spirit of the game, and use your persona to play with a special
-                  personality all its own. Interact with the other player characters and non-player
-                  characters to give the game campaign a unique flavor and "life". Above all, let
-                  yourself go, and enjoy! </p>
-            </item>
-            <label>Level</label>
-            <item xml:id="level" resp="nrg" n="8">
-               <p n="1">
-                  <emph rend="italics">An indication of character power:</emph> A player character
-                  begins the game at 1st level, i.e. the lowest possible level for a player
-                  character. The higher the level number, the more powerful the character is. </p>
-               <p n="2">
-                  <emph rend="italics">The depth of the dungeon complex beneath the ground:</emph>
-                  The 1st level of a dungeon is the first layer of the underground complex of
-                  tunnels, passages, rooms, chambers, and so forth. It is the 1st level beneath the
-                  ground. Beneath the 1st level is the 2nd, below that is the 3rd. 4th, Sth, etc.
-                  The higher the number, the lower the dungeon level (and the more hazardous its
-                  perils). </p>
-               <p n="3">
-                  <emph rend="italics">A measure of magic spell difficulty:</emph> The magic spells
-                  available to some classes of characters are graded by difficulty factor - which,
-                  incidentally, reflects the spells' effectiveness to some extent. 1st level spells
-                  are the basic ones available to beginning characters. They are generally the least
-                  powerful spells. Next come 2nd level spells, then come 3rd level spells, and so
-                  on. The highest level of any type of magic spell is 9th level, spells usable only
-                  by 18th level magic-users - lesser magic-users can possibly employ such spells
-                  under certain circumstances which are explained hereafter, but only at
-                  considerable risk. </p>
-               <p n="4">
-                  <emph rend="italics">A gauge of a "monster's" potential threat:</emph> Relatively
-                  weak creatures, monsters with few hit points, limited or non-existent magical
-                  abilities, those which do little damage when attacking, and those which have weak,
-                  or totally lack, venom are grouped together and called 1st level monsters.
-                  Slightly more powerful creatures are ordered into 2nd level, then comes 3rd. 4th,
-                  5th, and so on all the way up to 10th level (the highest, which includes the
-                  greatest monsters, demon princes, etc.) </p>
+
+
+            <!--nrg: copy-paste to add new items-->
+            <label>Example Descriptions</label>
+            <item>
+               <list xml:id="example_desc" type="gloss">
+                  <label>Example Item</label>
+                  <item xml:id="example_item" resp="you" n=""> Example content </item>
+               </list>
             </item>
          </list>
       </body>
