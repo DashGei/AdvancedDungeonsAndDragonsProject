@@ -36,6 +36,10 @@
    <text>
       <body>
          <list type="gloss">
+            <label>TT</label>
+            <item>for tooltips</item>
+         </list>
+         <list type="gloss">
             <label>Character Stats</label>
             <!--nrg: These will be categories of tooltips displayed on the popup-->
             <item>
@@ -49,15 +53,30 @@
                     ==========
                     Text effects are retained using <emph>
                     ==========
-                    Useful XPath:
+                    USEFUL XPATH
                     //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
+                    
+                    ======================================================================
+                    ANOTHER USEFUL XPATH: for correlating xml:id'd items with their labels
+                    ======================================================================
+                    
+                    //item[@xml:id="INT"]/preceding-sibling::label[1]
+                    
+                    
                -->
                   <label>Strength</label>
                   <item xml:id="STR" resp="nrg" n="9">
                      <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
-                     <p n="1">Strength is a measure of muscle, endurance, and stamina combined.</p>
+                     <!-- 2026-11-04: SUGGESTED ENCODING TO ASSIST W/ TOOLTIPS.
+                      You should also find a place in the glossary to gloss the:
+                      * project team members
+                      * the meanings of ana attributes
+                     -->
+                     <ab resp="#dg" ana="#TTe"><!--ebb: suggestion to write a Schematron rule that limits the string-length(), and tells you
+                     when you've exceeded a certain threshhold. Try a string-length() of 400 or less? --></ab>
+                     <p n="1" ana="#TTo">Strength is a measure of muscle, endurance, and stamina combined.</p>
                      <p n="2">For purposes of relating this ability to some reality, assume that a
-                        character with a strength of 3 is able to lift a maximum of 30 pounds weight
+                        character with a <rs type="strength">strength of <!--ebb: NUMBER CODING! --><num ana="diceRoll">3</num></rs> is able to lift a maximum of 30 pounds weight
                         above his or her head in a military press, while a character with 18
                         strength will be able to press 180 pounds in the same manner.</p>
                      <p n="3">Strength is the forte of fighters, for they must be physically
