@@ -118,23 +118,6 @@
                         guano and sulphur </f>
                   </fs>
                </f>
-               <f name="Command"><fs type="attributes"><f name="level"><numeric value="1"/>
-               </f>
-               <f name="desc">
-                  Explanation/Description: This spell enables the cleric to isSue a command
-                  of a single word. The command must be uttered in a language which the
-                  spell recipient is able to understand. The individual will obey to the best of
-                  his/her/its ability only so long as the command is absolutely clear and
-                  unequivocal, i.e. "Suicide!" could be a noun, so the creature would ignore
-                  the command. A command to "Die!" would cause the recipient to fall in a
-                  faint or cataleptic state for 1 round, but thereafter the creature would be
-                  alive and well. Typical command words are: back, halt, flee, run, stop, fall,
-                  fly, go, leave, surrender, sleep, rest, etc. Undead are not affected by a
-                  command. Creatures with intelligence of 13 or more, and creatures with 6
-                  or more hit dice (or experience levels) are entitled to a saving throw
-                  versus magic. (Creatures with 13 or higher intelligence and 6 hit
-                  dice/levels do not get 2 saving throws!)
-               </f>
             </fs>
          </div>
       </body>

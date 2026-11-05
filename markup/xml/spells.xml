@@ -1,28 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="spells.rnc" type="application/relax-ng-compact-syntax"?>
-<spells>
-    <spell name="Fireball" school="Evocation" reversible="false" class="Magic-user" level="3"
-        range="10" range_scaling="1" duration="Instantaneous" aoe="2" shape="sphere" component="V S" cast_time="3" saving_throw="1/2" > 
-        A fireball is an explosive burst of flame,
-        which detonates with a low roar, and delivers damage proportionate to the level of the
-        magic-user who cast it, i.e. <damage roll="d6" scaling="one additional die per level">1
-            six-sided die (d6) for each level of experience of the spell caster.</damage> Exception:
-        Magic fireball wands deliver 6 die fireballs (6d6), magic staves with this capability
-        deliver 8 die fireballs, and scroll spells of this type deliver a fireball of from 5 to 10
-        dice (d6 + 4) of damage. The burst of the fireball does not expend a considerable amount of
-        pressure, and the burst will generally conform to the shape of the area in which it occurs,
-        thus covering an area equal to its normal spherical volume. [The area which is covered by
-        the fireball is a total volume of roughly 33,000 cubic feet (or yards)]. Besides causing
-        damage to creatures, the fireball ignites all combustible materials within its burst radius,
-        and the heat of the fireball will melt soft metals such as gold, copper, silver, etc. Items
-        exposed to the spell's effects must be rolled for to determine if they are affected. Items
-        with a creature which makes its saving throw are considered as unaffected. The magic-user
-        points his or her finger and speaks the range (distance and height) at which the fireball is
-        to burst. A streak flashes from the pointing digit and, unless it impacts upon a material
-        body prior to attaining the prescribed range, flowers into the fireball. If creatures fail
-        their saving throws, they all take full hit point damage from the blast. Those who make
-        saving throws manage to dodge, fall flat or roll aside, taking 1/2 the full hit point damage
-        - each and every one within the blast area. The material component of this spell is
-            <material>a tiny ball composed of bat guano and sulphur</material>
-    </spell>
-</spells>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>AD&amp;D 1e Player's Handbook</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Internet Archive</publisher>
+            <address>
+               <addrLine>300 Funston Ave</addrLine>
+               <addrLine>San Francisco, California</addrLine>
+               <addrLine>United States</addrLine>
+            </address>
+            <availability>
+               <p>Preserved by the Internet Archive and released under an open-source license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>AD&amp;D Player's Handbook</title>
+               <author>Gary Gygax</author>
+               <publisher>Random House, Inc</publisher>
+               <address>
+                  <addrLine>TSR Hobbies, POB 756</addrLine>
+                  <addrLine>Lake Geneva, WI 53147</addrLine>
+               </address>
+               <date when="1978">1978</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <fs type="Spells">
+               <f name="Fireball">
+                  <fs type="attributes">
+                     <f name="level">
+                        <numeric value="3"/>
+                     </f>
+                     <f name="range">
+                        <vColl org="set"> <!--nrg: "set" here is because the values are not necessarily in order as in a list-->
+                           <numeric value="10" n="base"/> <!--nrg: @n is being used here "in the specification of a standard reference system for the text" as per TEI-->
+                           <numeric value="1" n="scaling_val"/>
+                           <string n="scaling_type">per level of spellcaster</string>
+                           <string n="unit">inch</string>
+                        </vColl>
+                     </f>
+                     <f name="duration">
+                        <string>Instantaneous</string>
+                     </f>
+                     <f name="aoe">
+                        <vColl org="set">
+                           <numeric value="2" n="distance"/>
+                           <string n="unit">inch</string>
+                           <string n="shape">sphere</string> <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
+                        </vColl>
+                     </f>
+                     <f name="components">
+                        <vColl org="list"> <!--nrg: "list" here is because VSM are always listed in that order in the text-->
+                           <string n="verbal"/>
+                           <string n="somatic"/>
+                           <string n="material" resp="nrg">A tiny ball composed of bat guano and sulphur</string> <!--nrg: material erroneously not included in original component list-->
+                        </vColl>
+                     </f>
+                     <f name="cast_time">
+                        <vColl org="set">
+                           <numeric value="3"/>
+                           <string n="unit">segments</string>
+                        </vColl>
+                     </f>
+                     <!-- 
+                     nrg: I'm not sure about how we should organize singular values like these ones?
+                          It feels inefficient to keep them all separate like this but I wanted to
+                          preserve the number of steps down from the Fireball feature for each value
+                     -->
+                     <f name="saving_throw">
+                        <vColl org="set">
+                          <numeric value="1/2"/>
+                          <string n="effect">damage</string>
+                        </vColl>
+                     </f>
+                     <f name="roll">
+                        <vColl org="set">
+                           <numeric value="1" max="6" n="d6"/> <!--nrg: I'm wondering if this could be a good way to convey dice? Not sure-->
+                           <numeric value="1" n="scaling_val"/>
+                           <string n="scaling_type">per level of spellcaster</string>
+                        </vColl>
+                        
+                     </f> <!--nrg: will need to be annotated later-->
+                     <f name="desc"> A fireball is an explosive burst of flame, which detonates with
+                        a low roar, and delivers damage proportionate to the level of the magic-user
+                        who cast it, i.e. 1 six-sided die (d6) for each level of experience of the
+                        spell caster. Exception: Magic fireball wands deliver 6 die fireballs (6d6),
+                        magic staves with this capability deliver 8 die fireballs, and scroll spells
+                        of this type deliver a fireball of from 5 to 10 dice (d6 + 4) of damage. The
+                        burst of the fireball does not expend a considerable amount of pressure, and
+                        the burst will generally conform to the shape of the area in which it
+                        occurs, thus covering an area equal to its normal spherical volume. [The
+                        area which is covered by the fireball is a total volume of roughly 33,000
+                        cubic feet (or yards)]. Besides causing damage to creatures, the fireball
+                        ignites all combustible materials within its burst radius, and the heat of
+                        the fireball will melt soft metals such as gold, copper, silver, etc. Items
+                        exposed to the spell's effects must be rolled for to determine if they are
+                        affected. Items with a creature which makes its saving throw are considered
+                        as unaffected. The magic-user points his or her finger and speaks the range
+                        (distance and height) at which the fireball is to burst. A streak flashes
+                        from the pointing digit and, unless it impacts upon a material body prior to
+                        attaining the prescribed range, flowers into the fireball. If creatures fail
+                        their saving throws, they all take full hit point damage from the blast.
+                        Those who make saving throws manage to dodge, fall flat or roll aside,
+                        taking 1/2 the full hit point damage - each and every one within the blast
+                        area. The material component of this spell is a tiny ball composed of bat
+                        guano and sulphur </f>
+                  </fs>
+               </f>
+               <f name="Command"><fs type="attributes"><f name="level"><numeric value="1"/>
+               </f>
+               <f name="desc">
+                  Explanation/Description: This spell enables the cleric to isSue a command
+                  of a single word. The command must be uttered in a language which the
+                  spell recipient is able to understand. The individual will obey to the best of
+                  his/her/its ability only so long as the command is absolutely clear and
+                  unequivocal, i.e. "Suicide!" could be a noun, so the creature would ignore
+                  the command. A command to "Die!" would cause the recipient to fall in a
+                  faint or cataleptic state for 1 round, but thereafter the creature would be
+                  alive and well. Typical command words are: back, halt, flee, run, stop, fall,
+                  fly, go, leave, surrender, sleep, rest, etc. Undead are not affected by a
+                  command. Creatures with intelligence of 13 or more, and creatures with 6
+                  or more hit dice (or experience levels) are entitled to a saving throw
+                  versus magic. (Creatures with 13 or higher intelligence and 6 hit
+                  dice/levels do not get 2 saving throws!)
+               </f>
+            </fs>
+         </div>
+      </body>
+   </text>
+</TEI>
