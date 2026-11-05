@@ -36,13 +36,31 @@
    <text>
       <body>
          <list type="gloss">
-            <label>TT</label>
-            <item>for tooltips</item>
-         </list>
-         <list type="gloss">
-            <label>Character Stats</label>
-            <!--nrg: These will be categories of tooltips displayed on the popup-->
+            <label>Encoder Informations</label>
             <item>
+               <list xml:id="encoders" type="gloss">
+                  <label>Dash Geiser</label>
+                  <item xml:id="wdg">
+                     Mr. Geiser should fill this in himself
+                  </item>
+                  <label>Rayne Roberston</label>
+                  <item xml:id="arr">
+                     Miss Robertson should fill this in herself
+                  </item>
+                  <label>Dash Geiser</label>
+                  <item xml:id="nrg">
+                     Nick Grundman is a DIGIT major minoring in Psychology, Data Visualization, and hoping to obtain a certificate in Human Factors, graduating in 2028.
+                     <!--Don't know what other information we should put in these. Some of the work we did for this project?-->
+                  </item>
+               </list>
+               <label>Tooltip Information</label>
+               <list xml:id="tool_tips" type="gloss">
+                  <label>Tool tip written by an encoder</label>
+                  <item xml:id="TTe"/> <!--nrg: these are self-closing because the label of the tag is enough information-->
+                  <label>Tool tip containing entirely unedited text</label>
+                  <item xml:id="TTo"/>
+               </list>
+               <label>Character Stats</label>
                <list xml:id="char_stats" type="gloss">
                   <!--
                     nrg: All entries are marked with "resp" because all paragraph breaks are my decision and some text
@@ -50,30 +68,19 @@
                     The idea behind marking numbered paragraphs is that you can have as detailed a tooltip as you desire:
                     If you want just a basic summary, the first paragraph will do, if you want a little more, view one more, etc.
                     I feel 5 or 6 is the maximum number of paragraph segments.
-                    ==========
+                    ======================================
                     Text effects are retained using <emph>
-                    ==========
+                    ======================================
+
+                    ============
                     USEFUL XPATH
+                    ============
                     //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
-                    
-                    ======================================================================
-                    ANOTHER USEFUL XPATH: for correlating xml:id'd items with their labels
-                    ======================================================================
-                    
                     //item[@xml:id="INT"]/preceding-sibling::label[1]
-                    
-                    
                -->
                   <label>Strength</label>
-                  <item xml:id="STR" resp="nrg" n="9">
-                     <!--nrg: This is likely temporary, but "n" here is the page(s) that contain the original text-->
-                     <!-- 2026-11-04: SUGGESTED ENCODING TO ASSIST W/ TOOLTIPS.
-                      You should also find a place in the glossary to gloss the:
-                      * project team members
-                      * the meanings of ana attributes
-                     -->
-                     <ab resp="#dg" ana="#TTe"><!--ebb: suggestion to write a Schematron rule that limits the string-length(), and tells you
-                     when you've exceeded a certain threshhold. Try a string-length() of 400 or less? --></ab>
+                  <item xml:id="STR" resp="#nrg" n="9">
+                     <!--nrg: "n" here is the page(s) that contain the original text-->
                      <p n="1" ana="#TTo">Strength is a measure of muscle, endurance, and stamina combined.</p>
                      <p n="2">For purposes of relating this ability to some reality, assume that a
                         character with a <rs type="strength">strength of <!--ebb: NUMBER CODING! --><num ana="diceRoll">3</num></rs> is able to lift a maximum of 30 pounds weight
@@ -97,7 +104,7 @@
                         STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
                   </item>
                   <label>Intelligence</label>
-                  <item xml:id="INT" resp="nrg" n="10">
+                  <item xml:id="INT" resp="#nrg" n="10">
                      <p n="1"> Intelligence is quite similar to what is currently known as
                         intelligence quotient, but it also includes mnemonic ability, reasoning, and
                         learning ability outside those measured by the written word. </p>
@@ -117,7 +124,7 @@
                         spells.</p>
                   </item>
                   <label>Wisdom</label>
-                  <item xml:id="WIS" resp="nrg" n="11">
+                  <item xml:id="WIS" resp="#nrg" n="11">
                      <p n="1">Wisdom is a composite term for the character’s enlightenment,
                         judgement, wile, will power, and (to a certain extent) intuitiveness. It is
                         of utmost importance to clerics, their major characteristic.</p>
@@ -130,7 +137,7 @@
                         wisdom. </p>
                   </item>
                   <label>Dexterity</label>
-                  <item xml:id="DEX" resp="nrg" n="11">
+                  <item xml:id="DEX" resp="#nrg" n="11">
                      <p n="1">Dexterity encompasses a number of physical attributes including
                         hand-eye coordination, agility, reflexes, precision, balance, and speed of
                         movement.</p>
@@ -148,7 +155,7 @@
                         effects of dexterity on characters.</p>
                   </item>
                   <label>Constitution</label>
-                  <item xml:id="CON" resp="nrg" n="12">
+                  <item xml:id="CON" resp="#nrg" n="12">
                      <p n="1">Constitution is a term which encompasses the character’s physique,
                         fitness, health, and resistance.</p>
                      <p n="2">Since constitution affects the character‘s hit dice and chances of
@@ -170,7 +177,7 @@
                         and irrevocable without use of some other magical means such as a wish.</p>
                   </item>
                   <label>Charisma</label>
-                  <item xml:id="CHA" resp="nrg" n="13">
+                  <item xml:id="CHA" resp="#nrg" n="13">
                      <p n="1">Charisma is the measure of the character's combined physical
                         attractiveness, persuasiveness, and personal magnetism.</p>
                      <p n="2">A generally non-beautiful character can have a very high charisma due
@@ -189,7 +196,10 @@
             <item>
                <list>
                   <label>Dwarves</label>
-                  <item xml:id="dwarves" resp="nrg" n="15 16">
+                  <item xml:id="dwarves" resp="#nrg" n="15 16">
+                     <ab ana="#TTe" resp="#wdg">Mr. Geiser needs to fill this out</ab>
+                     <!--ebb: suggestion to write a Schematron rule that limits the string-length(), and tells you
+                     when you've exceeded a certain threshhold. Try a string-length() of 400 or less? -->
                      <p n="1"> The race of dwarves typically dwells in hilly or mountainous regions.
                         As player characters, both dwarves and their cousins the "mountain dwarves"
                         can be considered. </p>
@@ -244,7 +254,7 @@
             <item>
                <list xml:id="game_desc" type="gloss">
                   <label>Advanced Dungeons &amp; Dragons</label>
-                  <item xml:id="ADnD" resp="nrg" n="7">
+                  <item xml:id="ADnD" resp="#nrg" n="7">
                      <!--nrg: This entry is heavily cobbled together from snippets on this one page-->
                      <p n="1">The game is ideally for three or more adult players: one player must
                         serve as the Dungeon Master, the shaper of the fantasy milieu, the "world"
@@ -268,7 +278,7 @@
                         yet has distinct disadvantages, just as human characters do.</p>
                   </item>
                   <label>Player Guidelines</label>
-                  <item xml:id="play_guide" resp="nrg" n="2">
+                  <item xml:id="play_guide" resp="#nrg" n="2">
                      <p n="1"> Be an organized player; have the necessary information on your
                         character readily at hand and available to the Dungeon Master. </p>
                      <p n="2"> Cooperate with the Dungeon Master and respect his decisions; if you
@@ -295,7 +305,7 @@
             <item>
                <list xml:id="char_build" type="gloss">
                   <label>Level</label>
-                  <item xml:id="level" resp="nrg" n="8">
+                  <item xml:id="level" resp="#nrg" n="8">
                      <p n="1">
                         <emph rend="italics">An indication of character power:</emph> A player
                         character begins the game at 1st level, i.e. the lowest possible level for a
@@ -330,7 +340,7 @@
                      </p>
                   </item>
                   <label>Character Races</label>
-                  <item xml:id="char_races" resp="nrg" n="13 15">
+                  <item xml:id="char_races" resp="#nrg" n="13 15">
                      <!--nrg: Separated pages mean two disjointed pages-->
                      <p n="1">After a player has determined the abilities of his or her character,
                         it is then time to decide of what racial stock the character is to be. For
@@ -354,7 +364,7 @@
             <item>
                <list xml:id="combat_desc" type="gloss">
                   <label>Combat</label>
-                  <item xml:id="combat" resp="nrg" n="104 105">
+                  <item xml:id="combat" resp="#nrg" n="104 105">
                      <p n="1">This broad heading covers all forms of attack and fighting. It
                         includes clerical turning undead, magical control, spell attacks, breath and
                         gaze weapon attacks, magical device attacks, missile discharge, and melee
@@ -374,7 +384,7 @@
                         power of the attacker and the armor class of the defender. </p>
                   </item>
                   <label>Initiative</label>
-                  <item xml:id="initiative" resp="nrg" n="104">
+                  <item xml:id="initiative" resp="#nrg" n="104">
                      <p n="1">The initiative factor affects who can do what and when during the
                         course of an encounter of any sort.</p>
                      <p n="2">Initiative allows one group, the party or the monster(s), to begin
@@ -397,7 +407,7 @@
                         weight of action must be determined.</p>
                   </item>
                   <label>Saving Throws</label>
-                  <item xml:id="saving_throws" resp="nrg" n="105">
+                  <item xml:id="saving_throws" resp="#nrg" n="105">
                      <p n="1">The chance to avoid or partially negate magical and breath attack
                         forms is known as the save.</p>
                      <p n="2">Note that magic items and even normal items and weapons must be saved
@@ -411,7 +421,7 @@
                         protections and character class and race.</p>
                   </item>
                   <label>Armor Class</label>
-                  <item xml:id="armor_class" resp="nrg" n="105">
+                  <item xml:id="armor_class" resp="#nrg" n="105">
                      <p n="1"> The type of armor worn, the inclusion of a shield, magical factors,
                         and dexterity are inclusions in overall armor class. </p>
                      <p n="2"> The size ratio is also important at times, i.e. a dwarf adds 4
@@ -427,7 +437,7 @@
                   </item>
                   <label>First Strike</label>
                   <!--nrg: much of this is useless and Dash said I should stop encoding them-->
-                  <item xml:id="first_strike" resp="nrg" n="105">
+                  <item xml:id="first_strike" resp="#nrg" n="105">
                      <p n="1">The 1 minute melee round assumes much activity - rushes, retreats,
                         feints, parries, checks, and so on. Once during this period each combatant
                         has the opportunity to get a real blow in.</p>
