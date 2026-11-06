@@ -34,6 +34,11 @@ navbar {
 }
 
 body {
+<<<<<<< HEAD
+=======
+        background: #220522;
+    background-attachment: fixed;
+>>>>>>> 7584291393ac320215a6cf562fa150a7bd75b5a2
     line-height: 22px;
     font-family: Calibri, Arial, "Times New Roman";
     font-size: 20px;
