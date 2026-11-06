@@ -36,27 +36,25 @@
    <text>
       <body>
          <list type="gloss">
-            <label>Encoder Informations</label>
+            <label>Encoder Information</label>
             <item>
                <list xml:id="encoders" type="gloss">
                   <label>Dash Geiser</label>
-                  <item xml:id="wdg">
-                     Mr. Geiser should fill this in himself
-                  </item>
+                  <item xml:id="wdg"> Mr. Geiser should fill this in himself </item>
                   <label>Rayne Roberston</label>
-                  <item xml:id="arr">
-                     Miss Robertson should fill this in herself
-                  </item>
+                  <item xml:id="arr"> Miss Robertson should fill this in herself </item>
                   <label>Dash Geiser</label>
-                  <item xml:id="nrg">
-                     Nick Grundman is a DIGIT major minoring in Psychology, Data Visualization, and hoping to obtain a certificate in Human Factors, graduating in 2028.
+                  <item xml:id="nrg"> Nick Grundman is a DIGIT major minoring in Psychology, Data
+                     Visualization, and hoping to obtain a certificate in Human Factors, graduating
+                     in 2028.
                      <!--Don't know what other information we should put in these. Some of the work we did for this project?-->
                   </item>
                </list>
                <label>Tooltip Information</label>
                <list xml:id="tool_tips" type="gloss">
                   <label>Tool tip written by an encoder</label>
-                  <item xml:id="TTe"/> <!--nrg: these are self-closing because the label of the tag is enough information-->
+                  <item xml:id="TTe"/>
+                  <!--nrg: these are self-closing because the label of the tag is enough information-->
                   <label>Tool tip containing entirely unedited text</label>
                   <item xml:id="TTo"/>
                </list>
@@ -81,11 +79,14 @@
                   <label>Strength</label>
                   <item xml:id="STR" resp="#nrg" n="9">
                      <!--nrg: "n" here is the page(s) that contain the original text-->
-                     <p n="1" ana="#TTo">Strength is a measure of muscle, endurance, and stamina combined.</p>
+                     <p n="1" ana="#TTo">Strength is a measure of muscle, endurance, and stamina
+                        combined.</p>
                      <p n="2">For purposes of relating this ability to some reality, assume that a
-                        character with a <rs type="strength">strength of <!--ebb: NUMBER CODING! --><num ana="diceRoll">3</num></rs> is able to lift a maximum of 30 pounds weight
-                        above his or her head in a military press, while a character with 18
-                        strength will be able to press 180 pounds in the same manner.</p>
+                        character with a <rs type="strength">strength of
+                              <!--ebb: NUMBER CODING! --><num ana="diceRoll">3</num></rs> is able to
+                        lift a maximum of 30 pounds weight above his or her head in a military
+                        press, while a character with 18 strength will be able to press 180 pounds
+                        in the same manner.</p>
                      <p n="3">Strength is the forte of fighters, for they must be physically
                         powerful in order to wear armor and wield heavy weapons. Therefore, strength
                         is the major characteristic <emph rend="italics">(or prime requisite)</emph>
