@@ -19,14 +19,19 @@ li {
   src: url("fonts/MontenegrinGothicOne-Regular.ttf");
 }
 
+a {
+    color: slateBlue;
+}
+
 header {
     text-align: center;
     align-items: center;
     justify-content: center;
     font-family: MontenegrinGothicOne-Regular, "Times New Roman";
-    color: red;
-    margin-bottom: 5em;
-    background-color: lightgray;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    border: 3px solid;
+    border-image: linear-gradient(to top left, #FAE4AF, #E7E8AC) 1;
 }
 
 navbar {
@@ -35,16 +40,25 @@ navbar {
     justify-content: center;
 }
 
+.text-frame {
+    background-color: #463B4F;
+    padding-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #03456e;
+    opacity: 90%;
+}
+
 body {
-    background: url("content/background-dice.webp");
+    background: url("content/washi.png");
     background-repeat: repeat;
-    background-size: 1000px 1000px;
-    background-color: steelBlue;
-    animation: scroll 100s linear infinite;
+    background-size: 150px 150px;
+    background-color: #32253D;
+    animation: scroll 10s linear infinite;
     line-height: 22px;
     font-family: Calibri, Arial, "Times New Roman";
     font-size: 20px;
-    color: #eaebe2;
+    color: #FFFFEB;
 }
 
 @keyframes scroll {
@@ -52,7 +66,7 @@ body {
     background-position: 0 0;
     }
     to {
-    background-position: 2000px 1000px;
+    background-position: 300px 150px;
     }
 }
 
@@ -64,14 +78,6 @@ strong {
 img {
     width: 100%;
     max-width: 500px;
-}
-
-.text-frame {
-    background-color: #08283a;
-    padding-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px #03456e
 }
 
 .centered {
@@ -92,6 +98,7 @@ iframe {
     column-count: 2;
     border: 3px solid;
     padding: 10px;
+    border-image: linear-gradient(to top left, #FAE4AF, #E7E8AC) 1;
 }
 
 .styled-table {
