@@ -25,6 +25,8 @@ header {
     justify-content: center;
     font-family: MontenegrinGothicOne-Regular, "Times New Roman";
     color: red;
+    margin-bottom: 5em;
+    background-color: lightgray;
 }
 
 navbar {
@@ -34,16 +36,26 @@ navbar {
 }
 
 body {
-<<<<<<< HEAD
-=======
-        background: #220522;
-    background-attachment: fixed;
->>>>>>> 7584291393ac320215a6cf562fa150a7bd75b5a2
+    background: url("content/background-dice.webp");
+    background-repeat: repeat;
+    background-size: 1000px 1000px;
+    background-color: steelBlue;
+    animation: scroll 100s linear infinite;
     line-height: 22px;
     font-family: Calibri, Arial, "Times New Roman";
     font-size: 20px;
     color: #eaebe2;
 }
+
+@keyframes scroll {
+    from {
+    background-position: 0 0;
+    }
+    to {
+    background-position: 2000px 1000px;
+    }
+}
+
 
 strong {
     color: #eceed8;
