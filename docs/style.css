@@ -65,6 +65,10 @@ body {
     color: #FFFFEB;
 }
 
+span {
+    text-decoration: underline dashed white 1.5px;
+}
+
 @keyframes scroll {
     from {
     background-position: 0 0;
