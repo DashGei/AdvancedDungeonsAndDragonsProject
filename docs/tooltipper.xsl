@@ -53,34 +53,48 @@
         </strong>
     </xsl:template>
     
-    <!--nrg: almost entirely written by Mr. Gemini... will be deleted, just a guide for now
-        this is pretty inadequate as well, because the regex is manually coded, which gets rid of the whole point of this
+    <!--nrg: almost entirely written by Mr. Gemini... will be deleted/modified, just a guide for now
+             
     -->
     <xsl:variable name="glossary" select="doc('../markup/glossary.xml')"/>
+    <!--nrg: this grabs all labels in the glossary, excluding ones outside of a category list (like Character Building and Combat Descriptions)-->
+    <xsl:variable name="validLabels" select="$glossary//list[@xml:id ]/label"/>
+
+    <!--nrg: i don't know what this does or why it's important-->
+    <xsl:variable name="terms" select="if (exists($validLabels)) then concat('(^|\W)(', string-join($validLabels, '|'), ')($|\W)') else ''"/>
     
+    <!--nrg: for all the text in the document-->
     <xsl:template match="text()">
-        <xsl:analyze-string select="." regex="(Strength|Intelligence|Wisdom|Charisma|Constitution)" flags="i">
-
-            <xsl:matching-substring>
-                <xsl:variable name="termUpper" select="upper-case(.)"/>
-                <xsl:variable name="statID" select="substring($termUpper, 1, 3)"/>
-                
-                <xsl:variable name="glossaryItem" select="$glossary//item[@xml:id = $statID]"/>
-                
-                <span class="{$glossaryItem/../@xml:id}">
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="normalize-space($glossaryItem/p[@ana='#TTo'])"/>
-                    </xsl:attribute>
-                    <xsl:value-of select="."/>
-                </span>
-            </xsl:matching-substring>
-
-            <xsl:non-matching-substring>
+        <xsl:choose>
+            <!--nrg: test catches crashes when $terms might be empty (if none are in the text)
+                     matches() checks for only text that matches, skipping past whitespace, paragraphs with no terms, etc.-->
+            <xsl:when test="$terms != '' and matches(., $terms, 'i')">
+                <!--nrg: checks through paragraphs that pass this test with regex for every label it found, flags="i" makes it case-insensitive-->
+                <xsl:analyze-string select="." regex="{$terms}" flags="i">
+                    <xsl:matching-substring>
+                        <!--Gemini: Group 1 is leading space/punctuation, Group 2 is the matched term, Group 3 is trailing space/punctuation -->
+                        <xsl:value-of select="regex-group(1)"/>
+                        
+                        <xsl:variable name="matchedWord" select="lower-case(normalize-space(regex-group(2)))"/>
+                        <!--Gemini: Query $validLabels (the XML nodes), NOT $terms (the string) -->
+                        <xsl:variable name="glossaryItem" select="$validLabels[lower-case(normalize-space(.)) = $matchedWord][1]/following-sibling::item[1]"/>
+                        
+                        <span class="{$glossaryItem/../@xml:id}" title="{normalize-space($glossaryItem/p[@n='1'])}">
+                            <xsl:value-of select="regex-group(2)"/>
+                        </span>
+                        
+                        <xsl:value-of select="regex-group(3)"/>
+                    </xsl:matching-substring>
+                    
+                    <xsl:non-matching-substring>
+                        <xsl:value-of select="."/>
+                    </xsl:non-matching-substring>
+                </xsl:analyze-string>
+            </xsl:when>
+            <xsl:otherwise>
                 <xsl:value-of select="."/>
-            </xsl:non-matching-substring>
-            
-        </xsl:analyze-string>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-    
     
 </xsl:stylesheet>

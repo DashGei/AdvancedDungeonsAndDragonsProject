@@ -53,10 +53,10 @@
                <label>Tooltip Information</label>
                <list xml:id="tool_tips" type="gloss">
                   <label>Tool tip written by an encoder</label>
-                  <item xml:id="TTe"/> <!--nrg: TTe stands for "Tool tip edited" and will mark the description provided by one of us if one is needed-->
+                  <item xml:id="tte"/> <!--nrg: TTe stands for "Tool tip edited" and will mark the description provided by one of us if one is needed-->
                   <!--nrg: these are self-closing because the label of the tag is enough information-->
                   <label>Tool tip containing entirely unedited text</label>
-                  <item xml:id="TTo"/> <!--nrg: TTo stands for "Tool tip original" and will mark the most adequate short description provided by the original authors-->
+                  <item xml:id="tto"/> <!--nrg: TTo stands for "Tool tip original" and will mark the most adequate short description provided by the original authors-->
                </list>
                <label>Character Stats</label>
                <list xml:id="char_stats" type="gloss">
@@ -77,9 +77,9 @@
                     //item[@xml:id="INT"]/preceding-sibling::label[1]
                   -->
                   <label>Strength</label>
-                  <item xml:id="STR" resp="#nrg" n="9">
+                  <item xml:id="str" resp="#nrg" n="9">
                      <!--nrg: "n" here is the page(s) that contain the original text-->
-                     <p n="1" ana="#TTo">Strength is a measure of muscle, endurance, and stamina
+                     <p n="1" ana="#tto">Strength is a measure of muscle, endurance, and stamina
                         combined.</p>
                      <p n="2">For purposes of relating this ability to some reality, assume that a
                         character with a <rs type="strength">strength of
@@ -105,8 +105,8 @@
                         STRENGTH TABLE II: ABILITY ADJUSTMENTS.</p>
                   </item>
                   <label>Intelligence</label>
-                  <item xml:id="INT" resp="#nrg" n="10">
-                     <p n="1" ana="#TTo"> Intelligence is quite similar to what is currently known as
+                  <item xml:id="int" resp="#nrg" n="10">
+                     <p n="1" ana="#tto"> Intelligence is quite similar to what is currently known as
                         intelligence quotient, but it also includes mnemonic ability, reasoning, and
                         learning ability outside those measured by the written word. </p>
                      <p n="2">Intelligence dictates the number of languages in which the character
@@ -125,8 +125,8 @@
                         spells.</p>
                   </item>
                   <label>Wisdom</label>
-                  <item xml:id="WIS" resp="#nrg" n="11">
-                     <p n="1" ana="#TTo">Wisdom is a composite term for the character’s enlightenment,
+                  <item xml:id="wis" resp="#nrg" n="11">
+                     <p n="1" ana="#tto">Wisdom is a composite term for the character’s enlightenment,
                         judgement, wile, will power, and (to a certain extent) intuitiveness. It is
                         of utmost importance to clerics, their major characteristic.</p>
                      <p n="2">It has a certain effect on saving throws against some magical attack
@@ -138,8 +138,8 @@
                         wisdom. </p>
                   </item>
                   <label>Dexterity</label>
-                  <item xml:id="DEX" resp="#nrg" n="11">
-                     <p n="1" ana="#TTo">Dexterity encompasses a number of physical attributes including
+                  <item xml:id="dex" resp="#nrg" n="11">
+                     <p n="1" ana="#tto">Dexterity encompasses a number of physical attributes including
                         hand-eye coordination, agility, reflexes, precision, balance, and speed of
                         movement.</p>
                      <p n="2">A high dexterity indicates superiority in all of the above attributes,
@@ -156,8 +156,8 @@
                         effects of dexterity on characters.</p>
                   </item>
                   <label>Constitution</label>
-                  <item xml:id="CON" resp="#nrg" n="12">
-                     <p n="1" ana="#TTo">Constitution is a term which encompasses the character’s physique,
+                  <item xml:id="con" resp="#nrg" n="12">
+                     <p n="1" ana="#tto">Constitution is a term which encompasses the character’s physique,
                         fitness, health, and resistance.</p>
                      <p n="2">Since constitution affects the character‘s hit dice and chances of
                         surviving such great system shocks as being changed by magic spell or
@@ -178,8 +178,8 @@
                         and irrevocable without use of some other magical means such as a wish.</p>
                   </item>
                   <label>Charisma</label>
-                  <item xml:id="CHA" resp="#nrg" n="13">
-                     <p n="1" ana="#TTo">Charisma is the measure of the character's combined physical
+                  <item xml:id="cha" resp="#nrg" n="13">
+                     <p n="1" ana="#tto">Charisma is the measure of the character's combined physical
                         attractiveness, persuasiveness, and personal magnetism.</p>
                      <p n="2">A generally non-beautiful character can have a very high charisma due
                         to strong measures of the other two aspects of charisma. It is important to
@@ -198,10 +198,10 @@
             <item>
                <list xml:id="game_desc" type="gloss">
                   <label>Advanced Dungeons &amp; Dragons</label>
-                  <item xml:id="ADnD" resp="#nrg" n="7">
+                  <item xml:id="adnd" resp="#nrg" n="7">
                      <!--nrg: This entry is heavily cobbled together from snippets on this one page
                               Should get a handwritten TTe-->
-                     <p n="1" ana="#TTo">The game is ideally for three or more adult players: one player must
+                     <p n="1" ana="#tto">The game is ideally for three or more adult players: one player must
                         serve as the Dungeon Master, the shaper of the fantasy milieu, the "world"
                         in which all action will take place. The other participants become
                         adventurers by creating characters to explore the fantastic world and face
@@ -224,7 +224,7 @@
                   </item>
                   <label>Player Guidelines</label>
                   <item xml:id="play_guide" resp="#nrg" n="2">
-                     <p n="1" ana="#TTo"> Be an organized player; have the necessary information on your
+                     <p n="1" ana="#tto"> Be an organized player; have the necessary information on your
                         character readily at hand and available to the Dungeon Master. </p>
                      <p n="2"> Cooperate with the Dungeon Master and respect his decisions; if you
                         disagree, present your viewpoint with deference to his position as game
@@ -251,7 +251,7 @@
                <list xml:id="char_build" type="gloss">
                   <label>Level</label>
                   <item xml:id="level" resp="#nrg" n="8">
-                     <p n="1" ana="#TTo">
+                     <p n="1" ana="#tto">
                         <emph rend="italics">An indication of character power:</emph> A player
                         character begins the game at 1st level, i.e. the lowest possible level for a
                         player character. The higher the level number, the more powerful the
@@ -288,7 +288,7 @@
                   <item xml:id="char_races" resp="#nrg" n="13 15">
                      <!--nrg: Separated pages mean two disjointed pages
                               Should have a handwritten TTe-->
-                     <p n="1" ana="#TTo">After a player has determined the abilities of his or her character,
+                     <p n="1" ana="#tto">After a player has determined the abilities of his or her character,
                         it is then time to decide of what racial stock the character is to be. For
                         purposes of the game the racial stocks are limited to the following: <emph
                            rend="italics">dwarven, elven, gnome, half-elven, holfling, half-orc, and
@@ -312,7 +312,7 @@
                   <label>Combat</label>
                   <item xml:id="combat" resp="#nrg" n="104 105">
                      <!--nrg: Should have a handwritten TTe-->
-                     <p n="1" ana="#TTo">This broad heading covers all forms of attack and fighting. It
+                     <p n="1" ana="#tto">This broad heading covers all forms of attack and fighting. It
                         includes clerical turning undead, magical control, spell attacks, breath and
                         gaze weapon attacks, magical device attacks, missile discharge, and melee
                         (hand-to-hand combat).</p>
@@ -332,7 +332,7 @@
                   </item>
                   <label>Initiative</label>
                   <item xml:id="initiative" resp="#nrg" n="104">
-                     <p n="1" ana="#TTo">The initiative factor affects who can do what and when during the
+                     <p n="1" ana="#tto">The initiative factor affects who can do what and when during the
                         course of an encounter of any sort.</p>
                      <p n="2">Initiative allows one group, the party or the monster(s), to begin
                         some course of action prior to the other group.</p>
@@ -355,7 +355,7 @@
                   </item>
                   <label>Saving Throws</label>
                   <item xml:id="saving_throws" resp="#nrg" n="105">
-                     <p n="1" ana="#TTo">The chance to avoid or partially negate magical and breath attack
+                     <p n="1" ana="#tto">The chance to avoid or partially negate magical and breath attack
                         forms is known as the save.</p>
                      <p n="2">Note that magic items and even normal items and weapons must be saved
                         for due to such attacks, falls or blows.</p>
@@ -370,7 +370,7 @@
                   <label>Armor Class</label>
                   <item xml:id="armor_class" resp="#nrg" n="105">
                      <!--nrg: Should have a handwritten TTe-->
-                     <p n="1" ana="#TTo"> The type of armor worn, the inclusion of a shield, magical factors,
+                     <p n="1" ana="#tto"> The type of armor worn, the inclusion of a shield, magical factors,
                         and dexterity are inclusions in overall armor class. </p>
                      <p n="2"> The size ratio is also important at times, i.e. a dwarf adds 4
                         factors to his armor class if his opponent is a giant. For example, splint
