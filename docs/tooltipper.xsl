@@ -6,7 +6,7 @@
     
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
         include-content-type="no" indent="yes"/>
-   <xsl:mode on-no-match="shallow-copy"/>
+    
    <!--nrg: adds the header and navbar onto the HTML file-->
    <xsl:template match="/">
        <html>
@@ -39,9 +39,11 @@
        </html>
     </xsl:template> 
     
-    <!--nrg: adds in the body, currently all is formatted with <p> so no transformation needed-->
-    <xsl:template match="body">
-        <xsl:apply-templates/>
+    <!--nrg: adds in the body, currently all is formatted with <p> so no extra transformation needed -->
+    <xsl:template match="p">
+        <p>
+            <xsl:apply-templates/>
+        </p>
     </xsl:template>
     
     <!--nrg: changes XML bolding to HTML bolding-->
@@ -51,7 +53,7 @@
         </strong>
     </xsl:template>
     
-    <!--nrg: entirely written by Mr. Gemini... will be deleted, just a guide for now
+    <!--nrg: almost entirely written by Mr. Gemini... will be deleted, just a guide for now
         this is pretty inadequate as well, because the regex is manually coded, which gets rid of the whole point of this
     -->
     <xsl:variable name="glossary" select="doc('../markup/glossary.xml')"/>
@@ -65,9 +67,9 @@
                 
                 <xsl:variable name="glossaryItem" select="$glossary//item[@xml:id = $statID]"/>
                 
-                <span class="glossary-term">
+                <span class="{$glossaryItem/../@xml:id}">
                     <xsl:attribute name="title">
-                        <xsl:value-of select="normalize-space($glossaryItem/p[@n='1'])"/>
+                        <xsl:value-of select="normalize-space($glossaryItem/p[@ana='#TTo'])"/>
                     </xsl:attribute>
                     <xsl:value-of select="."/>
                 </span>

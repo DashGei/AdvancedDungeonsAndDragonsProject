@@ -69,6 +69,10 @@ span {
     text-decoration: underline dashed white 1.5px;
 }
 
+span.char_stats {
+    text-decoration-color: red;
+}
+
 @keyframes scroll {
     from {
     background-position: 0 0;
