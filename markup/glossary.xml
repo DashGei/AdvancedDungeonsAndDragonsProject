@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -76,7 +75,7 @@
                                   ============
                     //item[@xml:id="ID_BLANK"]/p[position() le NUM_WANTED]
                     //item[@xml:id="INT"]/preceding-sibling::label[1]
-               -->
+                  -->
                   <label>Strength</label>
                   <item xml:id="STR" resp="#nrg" n="9">
                      <!--nrg: "n" here is the page(s) that contain the original text-->
@@ -405,7 +404,7 @@
             </item>
 
 
-            <!--nrg: copy-paste to add new items-->
+            <!--nrg: copy-paste to add new items
             <label>Example Descriptions</label>
             <item>
                <list xml:id="example_desc" type="gloss">
@@ -413,6 +412,7 @@
                   <item xml:id="example_item" resp="you" n=""> Example content </item>
                </list>
             </item>
+            -->
          </list>
       </body>
    </text>

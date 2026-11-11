@@ -7,6 +7,7 @@
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="yes" 
         include-content-type="no" indent="yes"/>
    <xsl:mode on-no-match="shallow-copy"/>
+   <!--nrg: adds the header and navbar onto the HTML file-->
    <xsl:template match="/">
        <html>
            <head>
@@ -36,13 +37,23 @@
                 </figure>
            </body>
        </html>
-   </xsl:template> 
-
+    </xsl:template> 
+    
+    <!--nrg: adds in the body, currently all is formatted with <p> so no transformation needed-->
     <xsl:template match="body">
         <xsl:apply-templates/>
     </xsl:template>
     
+    <!--nrg: changes XML bolding to HTML bolding-->
+    <xsl:template match="emph[@rend='bold']">
+        <strong>
+            <xsl:apply-templates/>
+        </strong>
+    </xsl:template>
     
+    <!--nrg: entirely written by Mr. Gemini... will be deleted, just a guide for now
+        this is pretty inadequate as well, because the regex is manually coded, which gets rid of the whole point of this
+    -->
     <xsl:variable name="glossary" select="doc('../markup/glossary.xml')"/>
     
     <xsl:template match="text()">
@@ -50,7 +61,7 @@
 
             <xsl:matching-substring>
                 <xsl:variable name="termUpper" select="upper-case(.)"/>
-                <xsl:variable name="statID" select="substring($termUpper, 1, 3)"/> <!-- Yields 'STR' or 'INT' -->
+                <xsl:variable name="statID" select="substring($termUpper, 1, 3)"/>
                 
                 <xsl:variable name="glossaryItem" select="$glossary//item[@xml:id = $statID]"/>
                 
