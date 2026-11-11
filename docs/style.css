@@ -66,11 +66,19 @@ body {
 }
 
 span {
-    text-decoration: underline dashed white 1.5px;
+    cursor: pointer;
 }
 
 span.char_stats {
-    text-decoration-color: red;
+    color: #F0C271;
+}
+
+span.char_build {
+    color: #A7E09B;
+}
+
+span.game_desc {
+    color: #A4ABE0;
 }
 
 @keyframes scroll {
