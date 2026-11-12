@@ -1,30 +1,3 @@
-.tt {
-    display: none;
-    z-index: 2;
-    position: absolute;
-}
-
-.tt.vis {
-    display: block;
-    transform: translateY(calc(-100% - 40%));
-}
-.tt-frame {
-    background-color: #4c6280;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px #030f16;
-}
-.tt-cont {
-
-    border: 3px solid;
-    border-image: linear-gradient(to top left, #c1ba86, #B5A642, #758e42) 1;
-    padding: 5px;
-}
-
-
-
-
-
 h1 {
     line-height: 40px;
     font-size: 30px;
@@ -106,6 +79,38 @@ span.char_build {
 
 span.game_desc {
     color: #A4ABE0;
+}
+
+.tooltip-trigger {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip-trigger:hover .tt-frame {
+    display: block;
+}
+
+span.tt-frame {
+    display: none;
+    background-color: #4c6280;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #030f16;
+    position: absolute;
+    z-index: 100;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    padding: 8px;
+    color: #FFFFEB;
+}
+
+span.tt-cont {
+    display: block;
+    border: 3px solid;
+    border-image: linear-gradient(to top left, #c1ba86, #B5A642, #758e42) 1;
+    padding: 8px;
 }
 
 @keyframes scroll {
