@@ -14,9 +14,9 @@ document.addEventListener('mouseover', function(e) {
   left = Math.max(16, Math.min(left, maxLeft));
 
   // Position above the word, or flip below if near the top of the screen
-  var top = wordRect.top - tipRect.height - 6;
+  var top = wordRect.top - tipRect.height - 1;
   if (top < 16) {
-    top = wordRect.bottom + 6;
+    top = wordRect.bottom + 1;
   }
 
   frame.style.left = left + 'px';
