@@ -86,25 +86,34 @@ span.game_desc {
     cursor: pointer;
 }
 
-.tooltip-trigger:hover .tt-frame {
+.tooltip-trigger:hover span.tt-frame {
     display: block;
+    opacity: 1;
 }
 
 span.tt-frame {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
     background-color: #4c6280;
-    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 5px 10px #030f16;
-    position: absolute;
-    z-index: 100;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 500px;
     padding: 8px;
     color: #FFFFEB;
+
+    /* Shrinks for short definitions, wraps neatly at 420px or screen width */
+    width: max-content;
+    max-width: min(420px, calc(100vw - 32px));
+
+    /* Reset text styling so tooltips look consistent everywhere */
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.35;
 }
+
 
 span.tt-cont {
     display: block;

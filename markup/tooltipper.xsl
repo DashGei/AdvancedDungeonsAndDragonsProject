@@ -15,7 +15,8 @@
                <meta charset="UTF-8" />
                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                <link rel="stylesheet" type="text/css" href="style.css" />
-           </head>
+               <script type="text/javascript" src="tooltip.js" defer="defer"/>
+           </head>               
            <body>
                 <div class="text-frame">
                     <header>
@@ -79,10 +80,16 @@
                         <!--Gemini: Query $validLabels (the XML nodes), NOT $terms (the string) -->
                         <xsl:variable name="glossaryItem" select="$validLabels[lower-case(normalize-space(.)) = $matchedWord][1]/following-sibling::item[1]"/>
                         
-                        <span class="{$glossaryItem/../@xml:id}" title="{normalize-space($glossaryItem/p[@n='1'])}">
+                        <!--nrg: This is the HTML structure of a tooltip-->
+                        <span class="{concat($glossaryItem/../@xml:id, ' tooltip-trigger')}">
                             <xsl:value-of select="regex-group(2)"/>
+                            <span class="tt-frame">
+                                <span class="tt-cont">
+                                    <xsl:value-of select="normalize-space($glossaryItem/p[@n='1'])"/>
+                                </span>
+                            </span>
                         </span>
-                        
+                      
                         <xsl:value-of select="regex-group(3)"/>
                     </xsl:matching-substring>
                     
