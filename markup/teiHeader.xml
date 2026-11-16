@@ -3,7 +3,9 @@ nrg: This should serve as the header we use in *every* TEI file.
      It isn't complete yet, but the idea is we can update it here and then
      copy-paste to every xml file. It should be universal, I think.
 -->
-<teiHeader>
+<!-- ebb: Just adding the TEI namespace to this. It's not valid TEI, but it's a
+well-formed XML document, so we can work with it in XSLT processing. -->
+<teiHeader xmlns="http://www.tei-c.org/ns/1.0">
     <fileDesc>
         <titleStmt>
             <title>AD&amp;D 1e Player's Handbook</title>
