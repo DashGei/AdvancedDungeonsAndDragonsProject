@@ -43,8 +43,10 @@
                         <numeric value="3"/>
                      </f>
                      <f name="range">
-                        <vColl org="set"> <!--nrg: "set" here is because the values are not necessarily in order as in a list-->
-                           <numeric value="10" n="base"/> <!--nrg: @n is being used here "in the specification of a standard reference system for the text" as per TEI-->
+                        <vColl org="set">
+                           <!--nrg: "set" here is because the values are not necessarily in order as in a list-->
+                           <numeric value="10" n="base"/>
+                           <!--nrg: @n is being used here "in the specification of a standard reference system for the text" as per TEI-->
                            <numeric value="1" n="scaling_val"/>
                            <string n="scaling_type">per level of spellcaster</string>
                            <string n="unit">inch</string>
@@ -57,14 +59,18 @@
                         <vColl org="set">
                            <numeric value="2" n="distance"/>
                            <string n="unit">inch</string>
-                           <string n="shape">sphere</string> <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
+                           <string n="shape">sphere</string>
+                           <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
                         </vColl>
                      </f>
                      <f name="components">
-                        <vColl org="list"> <!--nrg: "list" here is because VSM are always listed in that order in the text-->
+                        <vColl org="list">
+                           <!--nrg: "list" here is because VSM are always listed in that order in the text-->
                            <string n="verbal"/>
                            <string n="somatic"/>
-                           <string n="material" resp="nrg">A tiny ball composed of bat guano and sulphur</string> <!--nrg: material erroneously not included in original component list-->
+                           <string n="material" resp="nrg">A tiny ball composed of bat guano and
+                              sulphur</string>
+                           <!--nrg: material erroneously not included in original component list-->
                         </vColl>
                      </f>
                      <f name="cast_time">
@@ -80,18 +86,19 @@
                      -->
                      <f name="saving_throw">
                         <vColl org="set">
-                          <numeric value="1/2"/>
-                          <string n="effect">damage</string>
+                           <numeric value="1/2"/>
+                           <string n="effect">damage</string>
                         </vColl>
                      </f>
                      <f name="roll">
                         <vColl org="set">
-                           <numeric value="1" max="6" n="d6"/> <!--nrg: I'm wondering if this could be a good way to convey dice? Not sure-->
+                           <numeric value="1" max="6" n="d6"/>
+                           <!--nrg: I'm wondering if this could be a good way to convey dice? Not sure-->
                            <numeric value="1" n="scaling_val"/>
                            <string n="scaling_type">per level of spellcaster</string>
                         </vColl>
-                        
-                     </f> <!--nrg: will need to be annotated later-->
+                     </f>
+                     <!--nrg: will need to be annotated later-->
                      <f name="desc"> A fireball is an explosive burst of flame, which detonates with
                         a low roar, and delivers damage proportionate to the level of the magic-user
                         who cast it, i.e. 1 six-sided die (d6) for each level of experience of the
@@ -118,24 +125,27 @@
                         guano and sulphur </f>
                   </fs>
                </f>
-               <f name="Command"><fs type="attributes"><f name="level"><numeric value="1"/>
+               <f name="Command">
+                  <fs type="attributes">
+                     <f name="level">
+                        <numeric value="1"/>
+                     </f>
+                     <f name="desc"> Explanation/Description: This spell enables the cleric to isSue
+                        a command of a single word. The command must be uttered in a language which
+                        the spell recipient is able to understand. The individual will obey to the
+                        best of his/her/its ability only so long as the command is absolutely clear
+                        and unequivocal, i.e. "Suicide!" could be a noun, so the creature would
+                        ignore the command. A command to "Die!" would cause the recipient to fall in
+                        a faint or cataleptic state for 1 round, but thereafter the creature would
+                        be alive and well. Typical command words are: back, halt, flee, run, stop,
+                        fall, fly, go, leave, surrender, sleep, rest, etc. Undead are not affected
+                        by a command. Creatures with intelligence of 13 or more, and creatures with
+                        6 or more hit dice (or experience levels) are entitled to a saving throw
+                        versus magic. (Creatures with 13 or higher intelligence and 6 hit
+                        dice/levels do not get 2 saving throws!) </f>
+                  </fs>
                </f>
-               <f name="desc">
-                  Explanation/Description: This spell enables the cleric to isSue a command
-                  of a single word. The command must be uttered in a language which the
-                  spell recipient is able to understand. The individual will obey to the best of
-                  his/her/its ability only so long as the command is absolutely clear and
-                  unequivocal, i.e. "Suicide!" could be a noun, so the creature would ignore
-                  the command. A command to "Die!" would cause the recipient to fall in a
-                  faint or cataleptic state for 1 round, but thereafter the creature would be
-                  alive and well. Typical command words are: back, halt, flee, run, stop, fall,
-                  fly, go, leave, surrender, sleep, rest, etc. Undead are not affected by a
-                  command. Creatures with intelligence of 13 or more, and creatures with 6
-                  or more hit dice (or experience levels) are entitled to a saving throw
-                  versus magic. (Creatures with 13 or higher intelligence and 6 hit
-                  dice/levels do not get 2 saving throws!)
-               </f>
-            </fs>
+            </fs><!-- 2026-11-16 ebb: repaired the tagging for well-formedness. -->
          </div>
       </body>
    </text>

@@ -8,6 +8,14 @@
         include-content-type="no" indent="yes"/>
     
    <!--nrg: adds the header and navbar onto the HTML file-->
+    <!-- 2026-11-16 ebb: You didn't indicate what files are supposed to be processed by the tooltipper: You'd need to set up a collection variable to 
+    have this run over all the files in the collection. Currently it runs over whatever document is indicated in the oXygen processing window,
+    and it only works for glossary.xml. 
+    
+    We're going to do that work in a different XSLT file as an identity transformation to add new markup to your XML collection files.
+    This will simplify your project processing and effect a good separation of concerns. 
+    The processing here can be better applied to adding new markup
+    to the project. -->
    <xsl:template match="/">
        <html>
            <head>
@@ -63,6 +71,8 @@
 
     <!--nrg: i don't know what this does or why it's important-->
     <xsl:variable name="terms" select="if (exists($validLabels)) then concat('(^|\W)(', string-join($validLabels, '|'), ')($|\W)') else ''"/>
+    <!--ebb: I don't think you need to add extra stuff to this, but it's concatenating the start of a node and a word boundary to your list. -->
+    
     
     <!--nrg: for all the text in the document-->
     <xsl:template match="text()">
