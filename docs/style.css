@@ -50,7 +50,7 @@ figure {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 10px 20px #2E2733;
-    opacity: 90%;
+    opacity: 1;
 }
 
 body {
@@ -71,14 +71,22 @@ span {
 
 span.char_stats {
     color: #F0C271;
+    text-shadow: 0.5px 0.5px 2px #F0C271;
 }
 
 span.char_build {
     color: #A7E09B;
+    text-shadow: 0.5px 0.5px 2px #A7E09B;
 }
 
 span.game_desc {
     color: #A4ABE0;
+    text-shadow: 0.5px 0.5px 2px #A4ABE0;
+}
+
+span.combat_desc {
+    color: #E0ADA4;
+    text-shadow: 0.5px 0.5px 2px #E0ADA4;
 }
 
 .tooltip-trigger {
@@ -96,6 +104,7 @@ span.tt-frame {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 1;
     z-index: 1000;
     background-color: #4c6280;
     border-radius: 5px;
@@ -104,14 +113,21 @@ span.tt-frame {
     color: #FFFFEB;
     width: max-content;
     max-width: min(750px, calc(100vw - 32px));
-    text-align: justify;
+    /* nrg: nobody else likes the justify :(
+     * text-align: justify;  */
 }
 
 span.tt-cont {
     display: block;
     border: 3px solid;
+    opacity: 1;
     border-image: linear-gradient(to top left, #FAE4AF, #E7E8AC) 1;
     padding: 8px;
+}
+
+span.tt-desc {
+    font-style: italic;
+    font-weight: 700;
 }
 
 @keyframes scroll {

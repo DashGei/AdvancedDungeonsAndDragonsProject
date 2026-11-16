@@ -285,7 +285,7 @@
                      </p>
                   </item>
                   <label>Character Races</label>
-                  <item xml:id="char_races" resp="#nrg" n="13 15">
+                  <item xml:id="char_races" resp="#nrg" n="13, 15">
                      <!--nrg: Separated pages mean two disjointed pages
                               Should have a handwritten TTe-->
                      <p n="1" ana="#tto">After a player has determined the abilities of his or her character,
@@ -310,7 +310,7 @@
             <item>
                <list xml:id="combat_desc" type="gloss">
                   <label>Combat</label>
-                  <item xml:id="combat" resp="#nrg" n="104 105">
+                  <item xml:id="combat" resp="#nrg" n="104, 105">
                      <!--nrg: Should have a handwritten TTe-->
                      <p n="1" ana="#tto">This broad heading covers all forms of attack and fighting. It
                         includes clerical turning undead, magical control, spell attacks, breath and

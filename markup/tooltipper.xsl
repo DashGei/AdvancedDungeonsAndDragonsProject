@@ -85,7 +85,12 @@
                             <xsl:value-of select="regex-group(2)"/>
                             <span class="tt-frame">
                                 <span class="tt-cont">
-                                    <xsl:value-of select="normalize-space($glossaryItem/p[@n='1'])"/>
+                                    <xsl:value-of select="normalize-space($glossaryItem/p[@n='1'])"/><br/>
+                                    <span class="tt-desc">
+                                    Category: <xsl:value-of select="$glossaryItem/../@xml:id"/> | <!--nrg: category description, should find in glossary later-->
+                                    Page(s): <xsl:value-of select="$glossaryItem/@n"/> | <!--nrg: page number(s) of tooltip text-->
+                                    Coded by: <xsl:value-of select="$glossaryItem/@resp"/><br/> <!--nrg: encoder info, should find in glossary later-->
+                                    </span>
                                 </span>
                             </span>
                         </span>
