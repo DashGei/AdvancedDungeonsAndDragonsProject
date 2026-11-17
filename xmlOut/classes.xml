@@ -92,7 +92,7 @@
             details of the effects of <!--Matching string: intelligence-->
             <rs type="char_stats" ref="#int">intelligence</rs> an spell use, see
             
-            <emph rend="bold"></emph>. A magic-user with <!--Matching string: intelligence-->
+            <emph rend="bold">CHARACTER ABILITIES</emph>. A magic-user with <!--Matching string: intelligence-->
             <rs type="char_stats" ref="#int">intelligence</rs>
             of 16 or more also gains the benefit of adding 10% to experience points
             awarded to him or her by the Dungeon Master.</p>
@@ -121,8 +121,9 @@
             the use of each spell, and its casting makes it necessary to reabsorb
             the incantation by consulting the proper book of spells before it can
             again be cast. (See 
-            <emph rend="bold"></emph>
-         </p>
+            <emph rend="bold">CHARACTER SPELLS</emph> for more details.)
+            As with a11 other types of spells, those of magic-users must be spoken
+            or read aloud. </p>
          
          <p>There are many powerful items of magic which only this class of character
             can employ. Most magic scrolls, wands, staves, and many of the

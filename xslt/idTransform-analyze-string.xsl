@@ -86,11 +86,14 @@
                 </xsl:matching-substring>
                 <xsl:non-matching-substring>
                     <xsl:value-of select="."/>
+                    <!-- ebb: We can't use xsl:apply-templates when we've template matched on text nodes. 
+                        (There can't be any templates to match on these "leaf" text nodes.)
+                    So all of this is returning xsl:value-of.-->
                 </xsl:non-matching-substring>
             </xsl:analyze-string>
             </xsl:when>
         <xsl:otherwise>
-            <xsl:apply-templates/>
+            <xsl:value-of select="."/>
         </xsl:otherwise>
      </xsl:choose>
     </xsl:template>

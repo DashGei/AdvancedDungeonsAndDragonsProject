@@ -87,7 +87,9 @@
                
                <f name="offspring">
                   
-                  <string></string>
+                  <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being
+                     typically orcish. However, some one-tenth of orc-human 
+                     mongrels are sufficiently non-orcish to pass for human</string>
                   </f>
                
                <f name="level-requirement">
@@ -132,26 +134,29 @@
                   
                   <vColl org="list">
                      
-                     <string></string>
+                     <string>cleric/fighter</string>
                      
-                     <string></string>
+                     <string>cleric/thief</string>
                      
-                     <string></string>
+                     <string>cleric/assassin</string>
                      
-                     <string></string>
+                     <string>fighter/thief</string>
                      
-                     <string></string>
+                     <string>fighter/assassin</string>
                      </vColl>
                   </f>
                
                <f name="armor-restrictions">
                   
-                  <string></string>
+                  <string> When playing a multi-classed character, the half-orc 
+                     must abide by the restrictions of the least favorable class with regard only 
+                     to armor.</string>
                   </f>
                
                <f name="experience">
                   
-                  <string></string>
+                  <string>Experience is divided equally between
+                     the two classes.</string>
                   </f>
                
                <f name="languages">
@@ -162,11 +167,11 @@
                         
                         <vColl org="list">
                            
-                           <string></string>
+                           <string>common tongue</string>
                            
-                           <string></string>
+                           <string>alignment language</string>
                            
-                           <string></string>
+                           <string>orcish</string>
                            </vColl>
                         </f>
                      
@@ -193,7 +198,7 @@
                      
                      <f name="unit">
                         
-                        <string></string>
+                        <string>feet</string>
                         </f>
                      </fs>
                   </f>

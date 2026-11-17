@@ -107,13 +107,13 @@
                            <string n="scaling_type">per <!--Matching string: level-->
                               <rs type="char_build" ref="#level">level</rs> of spellcaster</string>
                            
-                           <string n="unit"></string>
+                           <string n="unit">inch</string>
                            </vColl>
                         </f>
                      
                      <f name="duration">
                         
-                        <string></string>
+                        <string>Instantaneous</string>
                         </f>
                      
                      <f name="aoe">
@@ -122,9 +122,9 @@
                            
                            <numeric value="2" n="distance"></numeric>
                            
-                           <string n="unit"></string>
+                           <string n="unit">inch</string>
                            
-                           <string n="shape"></string>
+                           <string n="shape">sphere</string>
                            <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
                            </vColl>
                         </f>
@@ -138,7 +138,8 @@
                            
                            <string n="somatic"></string>
                            
-                           <string n="material" resp="nrg"></string>
+                           <string n="material" resp="nrg">A tiny ball composed of bat guano and
+                              sulphur</string>
                            <!--nrg: material erroneously not included in original component list-->
                            </vColl>
                         </f>
@@ -149,7 +150,7 @@
                            
                            <numeric value="3"></numeric>
                            
-                           <string n="unit"></string>
+                           <string n="unit">segments</string>
                            </vColl>
                         </f>
                      <!-- 
@@ -164,7 +165,7 @@
                            
                            <numeric value="1/2"></numeric>
                            
-                           <string n="effect"></string>
+                           <string n="effect">damage</string>
                            </vColl>
                         </f>
                      
