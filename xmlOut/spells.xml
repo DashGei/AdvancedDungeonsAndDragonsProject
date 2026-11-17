@@ -81,78 +81,6 @@
       
       <body>
          
-         <p>It is absolutely essential to have high intelligence for a character who
-            is a magic-user - especially if a broad selection of spells is to be
-            had, as well as the use of the highest level spells. A magic-user must
-            have an intelligence of no less than 9 and a minimum dexterity of 6. For
-            details of the effects of intelligence an spell use, see
-            
-            <emph rend="bold">CHARACTER ABILITIES</emph>. A magic-user with intelligence
-            of 16 or more also gains the benefit of adding 10% to experience points
-            awarded to him or her by the Dungeon Master.</p>
-         
-         <p>Magic-users draw upon arcane powers in order to exercise their
-            profession. While they have mighty spells of offensive, defensive, and
-            informational nature, magic-users are very weak in combat. They have but
-            four-sided dice (d4) to determine how many hit points of damage they can
-            withstand, and magic-users have the least favorable table and
-            progression as regards missile and melee combat. Furthermore, they can
-            wear no armor and have few weapons they can use, for martial training is
-            so foreign to magic-use as to make the two almost mutually exclusive.
-            Magicusers can be of any alignment (explained hereafter). </p>
-         
-         <p>When a magic-user begins his or her profession, the character is usually
-            assumed to possess a strange tome in which he or she has scribed the
-            formulae for some of the spells known to the character. This spell book,
-            and each book later added (as the magic-user advances in levels of
-            ability, a book of spells for each higher level of spells which become
-            usable will have to have been prepared through study and research), must
-            be maintained by the magic-user. He or she must memorize and prepare for
-            the use of each spell, and its casting makes it necessary to reabsorb
-            the incantation by consulting the proper book of spells before it can
-            again be cast. (See 
-            <emph rend="bold">CHARACTER SPELLS</emph> for more details.)
-            As with a11 other types of spells, those of magic-users must be spoken
-            or read aloud. </p>
-         
-         <p>There are many powerful items of magic which only this class of character
-            can employ. Most magic scrolls, wands, staves, and many of the
-            miscellaneous items of magic are usable only by this class. Thus, while
-            magic-users are not strong in combat with weapons, they are possibly the
-            most fearsome of all character classes when high levels of ability are
-            finally attained. Survival to that point can be a problem, however, as
-            lowlevel magic-users are quite weak. </p>
-         
-         <p>When a magic-user attains 1 lth level (Wizard) or higher, he or she may
-            enchant items or scribe magic scrolls. This process requires the
-            undivided attention of the magic-user for quite long periods of time -
-            weeks to months - and it is also costly. As the Dungeon Master is
-            carefully instructed to keep exact record of game time spent in such
-            activity, the magic-user will effectively remove himself or herself from
-            a number of adventures while enchanting items or inscribing scrolls of
-            magic spells. As this relative inactivity means that the character will
-            not get experience points and treasure (monetary or magical) gained from
-            adventures which toke place during the inactive period, it is not usual
-            for a Wizard to manufacture many items or scrolls. However, as
-            occasional enchantment of items or penning of magic scrolls will take
-            place, your referee has complete information on the process, including
-            probabilities, time required, materials needed, and costs. </p>
-         
-         <p>It is possible for a magic-user of 12th or higher level to construct a
-            stronghold and clear the countryside in a 10 or 20 mile radius of all
-            monsters, thus ruling an area much as a noble. If this is accomplished,
-            a revenue of 5 silver pieces per inhabitant per month is generated in
-            the territory ruled. </p>
-         
-         <p>This is a fake paragraph I am using to demonstrate that it can also find strength,
-            wisdom, charisma, and constitution
-            Advanced Dungeons &amp; Dragons</p>
-         </body>
-      </text>
-   <text>
-      
-      <body>
-         
          <div>
             
             <fs type="Spells">
@@ -176,15 +104,16 @@
                            
                            <numeric value="1" n="scaling_val"></numeric>
                            
-                           <string n="scaling_type">per level of spellcaster</string>
+                           <string n="scaling_type">per <!--Matching string: level-->
+                              <rs type="char_build" ref="#level">level</rs> of spellcaster</string>
                            
-                           <string n="unit">inch</string>
+                           <string n="unit"></string>
                            </vColl>
                         </f>
                      
                      <f name="duration">
                         
-                        <string>Instantaneous</string>
+                        <string></string>
                         </f>
                      
                      <f name="aoe">
@@ -193,9 +122,9 @@
                            
                            <numeric value="2" n="distance"></numeric>
                            
-                           <string n="unit">inch</string>
+                           <string n="unit"></string>
                            
-                           <string n="shape">sphere</string>
+                           <string n="shape"></string>
                            <!--nrg: "radius" doesn't need to be specified because spheres are always categorized by radius-->
                            </vColl>
                         </f>
@@ -209,8 +138,7 @@
                            
                            <string n="somatic"></string>
                            
-                           <string n="material" resp="nrg">A tiny ball composed of bat guano and
-                              sulphur</string>
+                           <string n="material" resp="nrg"></string>
                            <!--nrg: material erroneously not included in original component list-->
                            </vColl>
                         </f>
@@ -221,7 +149,7 @@
                            
                            <numeric value="3"></numeric>
                            
-                           <string n="unit">segments</string>
+                           <string n="unit"></string>
                            </vColl>
                         </f>
                      <!-- 
@@ -236,7 +164,7 @@
                            
                            <numeric value="1/2"></numeric>
                            
-                           <string n="effect">damage</string>
+                           <string n="effect"></string>
                            </vColl>
                         </f>
                      
@@ -249,14 +177,17 @@
                            
                            <numeric value="1" n="scaling_val"></numeric>
                            
-                           <string n="scaling_type">per level of spellcaster</string>
+                           <string n="scaling_type">per <!--Matching string: level-->
+                              <rs type="char_build" ref="#level">level</rs> of spellcaster</string>
                            </vColl>
                         </f>
                      <!--nrg: will need to be annotated later-->
                      
                      <f name="desc"> A fireball is an explosive burst of flame, which detonates with
-                        a low roar, and delivers damage proportionate to the level of the magic-user
-                        who cast it, i.e. 1 six-sided die (d6) for each level of experience of the
+                        a low roar, and delivers damage proportionate to the <!--Matching string: level-->
+                        <rs type="char_build" ref="#level">level</rs> of the magic-user
+                        who cast it, i.e. 1 six-sided die (d6) for each <!--Matching string: level-->
+                        <rs type="char_build" ref="#level">level</rs> of experience of the
                         spell caster. Exception: Magic fireball wands deliver 6 die fireballs (6d6),
                         magic staves with this capability deliver 8 die fireballs, and scroll spells
                         of this type deliver a fireball of from 5 to 10 dice (d6 + 4) of damage. The
@@ -273,8 +204,10 @@
                         (distance and height) at which the fireball is to burst. A streak flashes
                         from the pointing digit and, unless it impacts upon a material body prior to
                         attaining the prescribed range, flowers into the fireball. If creatures fail
-                        their saving throws, they all take full hit point damage from the blast.
-                        Those who make saving throws manage to dodge, fall flat or roll aside,
+                        their <!--Matching string: saving throws-->
+                        <rs type="combat_desc" ref="#saving_throws">saving throws</rs>, they all take full hit point damage from the blast.
+                        Those who make <!--Matching string: saving throws-->
+                        <rs type="combat_desc" ref="#saving_throws">saving throws</rs> manage to dodge, fall flat or roll aside,
                         taking 1/2 the full hit point damage - each and every one within the blast
                         area. The material component of this spell is a tiny ball composed of bat
                         guano and sulphur </f>
@@ -299,171 +232,19 @@
                         a faint or cataleptic state for 1 round, but thereafter the creature would
                         be alive and well. Typical command words are: back, halt, flee, run, stop,
                         fall, fly, go, leave, surrender, sleep, rest, etc. Undead are not affected
-                        by a command. Creatures with intelligence of 13 or more, and creatures with
-                        6 or more hit dice (or experience levels) are entitled to a saving throw
-                        versus magic. (Creatures with 13 or higher intelligence and 6 hit
-                        dice/levels do not get 2 saving throws!) </f>
+                        by a command. Creatures with <!--Matching string: intelligence-->
+                        <rs type="char_stats" ref="#int">intelligence</rs> of 13 or more, and creatures with
+                        6 or more hit dice (or experience <!--Matching string: level-->
+                        <rs type="char_build" ref="#level">level</rs>s) are entitled to a saving throw
+                        versus magic. (Creatures with 13 or higher <!--Matching string: intelligence-->
+                        <rs type="char_stats" ref="#int">intelligence</rs> and 6 hit
+                        dice/<!--Matching string: level-->
+                        <rs type="char_build" ref="#level">level</rs>s do not get 2 <!--Matching string: saving throws-->
+                        <rs type="combat_desc" ref="#saving_throws">saving throws</rs>!) </f>
                      </fs>
                   </f>
                </fs>
             <!-- 2026-11-16 ebb: repaired the tagging for well-formedness. -->
-            </div>
-         </body>
-      </text>
-   <text>
-      
-      <body>
-         
-         <div type="fs">
-            
-            <fs type="half-orc">
-               
-               <f name="offspring">
-                  
-                  <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being
-                     typically orcish. However, some one-tenth of orc-human 
-                     mongrels are sufficiently non-orcish to pass for human</string>
-                  </f>
-               
-               <f name="level-requirement">
-                  
-                  <vColl org="set">
-                     
-                     <fs type="cleric">
-                        
-                        <f name="maximum-level">
-                           
-                           <numeric value="4"></numeric>
-                           </f>
-                        </fs>
-                     
-                     <fs type="fighter">
-                        
-                        <f name="maximum-level">
-                           
-                           <numeric value="10"></numeric>
-                           </f>
-                        </fs>
-                     
-                     <fs type="thief">
-                        
-                        <f name="maximum-level">
-                           
-                           <numeric value="8"></numeric>
-                           </f>
-                        </fs>
-                     
-                     <fs type="assassin">
-                        
-                        <f name="class-available">
-                           
-                           <symbol value="yes"></symbol>
-                           </f>
-                        </fs>
-                     </vColl>
-                  </f>
-               
-               <f name="multiclass-options">
-                  
-                  <vColl org="list">
-                     
-                     <string>cleric/fighter</string>
-                     
-                     <string>cleric/thief</string>
-                     
-                     <string>cleric/assassin</string>
-                     
-                     <string>fighter/thief</string>
-                     
-                     <string>fighter/assassin</string>
-                     </vColl>
-                  </f>
-               
-               <f name="armor-restrictions">
-                  
-                  <string> When playing a multi-classed character, the half-orc 
-                     must abide by the restrictions of the least favorable class with regard only 
-                     to armor.</string>
-                  </f>
-               
-               <f name="experience">
-                  
-                  <string>Experience is divided equally between
-                     the two classes.</string>
-                  </f>
-               
-               <f name="languages">
-                  
-                  <fs>
-                     
-                     <f name="known">
-                        
-                        <vColl org="list">
-                           
-                           <string>common tongue</string>
-                           
-                           <string>alignment language</string>
-                           
-                           <string>orcish</string>
-                           </vColl>
-                        </f>
-                     
-                     <f name="additional">
-                        
-                        <numeric value="2"></numeric>
-                        </f>
-                     </fs>
-                  </f>
-               
-               <f name="infravision">
-                  
-                  <fs>
-                     
-                     <f name="status">
-                        
-                        <symbol value="present"></symbol>
-                        </f>
-                     
-                     <f name="distance">
-                        
-                        <numeric value="60"></numeric>
-                        </f>
-                     
-                     <f name="unit">
-                        
-                        <string>feet</string>
-                        </f>
-                     </fs>
-                  </f>
-               
-               <f name="ability-modifiers">
-                  
-                  <fs>
-                     
-                     <f name="strength">
-                        
-                        <numeric value="1"></numeric>
-                        </f>
-                     
-                     <f name="constitution">
-                        
-                        <numeric value="1"></numeric>
-                        </f>
-                     
-                     <f name="charisma">
-                        
-                        <numeric value="-2"></numeric>
-                        </f>
-                     
-                     <f name="charisma-note">
-                        
-                        <string>The penalty is in regard to those non- 
-                           player character henchmen who are not themselves of half-orc race, so 
-                           the initial, unaltered, charisma ability score should be recorded.</string>
-                        </f>
-                     </fs>
-                  </f>
-               </fs>
             </div>
          </body>
       </text>
