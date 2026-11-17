@@ -37,7 +37,7 @@
     <!-- ebb: gloss item xml:ids: normalize-space() to remove any additonal spaces to ease matching -->
     <xsl:variable name="glossIDs" as="xs:string+" select="$glossItems/@xml:id ! normalize-space()"/>
 
-    <!-- ebb: While we're doing these Identity Transforms, should pull in your teiHeader.xml file. 
+    <!-- ebb: While we're doing these Identity Transforms, we should pull in your teiHeader.xml file. 
         This is tricky, because it's a file with a TEI element that isn't really a TEI document. 
     So we're going to reach for it as an element node: as="node()" rather than as="document-node()".
     I made this work by setting the TEI namespace on the teiHeader element in the XML file.
@@ -55,8 +55,15 @@
             <xsl:result-document method="xhtml" html-version="5" 
                 omit-xml-declaration="yes" include-content-type="no"
                 indent="yes" href="../xmlOut/{$filename}">
+              <!-- ebb: Put in the Schema lines from your source files.-->
+                <xsl:processing-instruction name="xml-model">
+            <xsl:text>href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:text>
+                 </xsl:processing-instruction>
+                <xsl:processing-instruction name="xml-model">
+            <xsl:text>href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:text>
+                 </xsl:processing-instruction>
                 <TEI>
-                        <xsl:apply-templates select="$teiHeader"/>
+                        <xsl:copy-of select="$teiHeader"/>
                         <xsl:apply-templates select="descendant::text"/>                    
                 </TEI>
             </xsl:result-document>
@@ -76,7 +83,8 @@
          <xsl:when test="matches($currentNode, $glossLabelBallofString, 'i')">   
         <xsl:analyze-string select="current()" regex="{$glossLabelBallofString}" flags="i">
                 <xsl:matching-substring>
-                    <xsl:variable name="matchingGloss" as="element()?" select="$glossary//label[(normalize-space() ! lower-case(.) = regex-group(0) ! lower-case(.))]"/>
+                    <xsl:variable name="matchingGloss" as="element()?" 
+                        select="$glossary//label[(normalize-space() ! lower-case(.) = regex-group(0) ! lower-case(.))]"/>
                     <!-- ebb: Our regex analyze-string matching substring is just regex-group(0) . Lower-case() both sides to ensure matches all round -->
                     <xsl:comment>Matching string: <xsl:value-of select="regex-group(0)"/></xsl:comment>
                     <rs type="{$matchingGloss/parent::list/@xml:id}" 
