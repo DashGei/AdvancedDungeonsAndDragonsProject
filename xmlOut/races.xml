@@ -1,238 +1,152 @@
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
-      
       <fileDesc>
-         
          <titleStmt>
-            
             <title>AD&amp;D 1e Player's Handbook</title>
             <!-- ebb: add info about the author, and the team as editors here. -->
-            
             <author>Gary Gygax</author>
-            
             <editor>W. Dashiell Geiser</editor>
-            
             <editor>Nick Grundman</editor>
-            
             <editor>Rayne Robertson</editor>
-            </titleStmt>
+         </titleStmt>
          <!-- ebb: What you're describing in the publicationStmt is really a sourceDesc
         about the electronic version of your source. 
         What you need in <fileDesc> is really about your project team and the publication
         you are creating. -->
-         
          <publicationStmt>
-            
             <p>Documents in this markup encoding project are stored on GitHub at 
-               
-               <ptr target="https://github.com/DashGei/AdvancedDungeonsAndDragonsProject"></ptr> and 
-               transformed and published on the web at
-               
-               <ptr target="https://dashgei.github.io/AdvancedDungeonsAndDragonsProject/"></ptr>
+                <ptr target="https://github.com/DashGei/AdvancedDungeonsAndDragonsProject"/> and 
+                transformed and published on the web at
+                <ptr target="https://dashgei.github.io/AdvancedDungeonsAndDragonsProject/"/>
             </p>
-            </publicationStmt>
-         
+         </publicationStmt>
          <sourceDesc>
-            
             <bibl>
-               
                <title>AD&amp;D Player's Handbook</title>
-               
                <author>Gary Gygax</author>
-               
                <publisher>Random House, Inc</publisher>
-               
                <address>
-                  
                   <addrLine>TSR Hobbies, POB 756</addrLine>
-                  
                   <addrLine>Lake Geneva, WI 53147</addrLine>
-                  </address>
-               
+               </address>
                <date when="1978">1978</date>
-               </bibl>
-            
+            </bibl>
             <bibl>
-               
                <title>AD&amp;D Player's Handbook</title>
-               
                <author>Gary Gygax</author>
-               
                <publisher>Internet Archive</publisher>
-               
                <address>
-                  
                   <addrLine>300 Funston Ave</addrLine>
-                  
                   <addrLine>San Francisco, California</addrLine>
-                  
                   <addrLine>United States</addrLine>
-                  </address>
-               
+               </address>
                <availability>
-                  
                   <p>Preserved by the Internet Archive and released under an open-source license</p>
-                  </availability>
-               </bibl>
-            </sourceDesc>
-         </fileDesc>
-      </teiHeader>
+               </availability>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
    <text>
-      
       <body>
-         
          <div type="fs">
-            
             <fs type="half-orc">
-               
                <f name="offspring">
-                  
-                  <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being
-                     typically orcish. However, some one-tenth of orc-human 
+                  <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being typically orcish. However, some one-tenth of orc-human 
                      mongrels are sufficiently non-orcish to pass for human</string>
-                  </f>
-               
+               </f>
                <f name="level-requirement">
-                  
                   <vColl org="set">
-                     
                      <fs type="cleric">
-                        
                         <f name="maximum-level">
-                           
-                           <numeric value="4"></numeric>
-                           </f>
-                        </fs>
-                     
+                           <numeric value="4"/>
+                        </f>
+                     </fs>
                      <fs type="fighter">
-                        
                         <f name="maximum-level">
-                           
-                           <numeric value="10"></numeric>
-                           </f>
-                        </fs>
-                     
+                           <numeric value="10"/>
+                        </f>
+                     </fs>
                      <fs type="thief">
-                        
                         <f name="maximum-level">
-                           
-                           <numeric value="8"></numeric>
-                           </f>
-                        </fs>
-                     
+                           <numeric value="8"/>
+                        </f>
+                     </fs>
                      <fs type="assassin">
-                        
                         <f name="class-available">
-                           
-                           <symbol value="yes"></symbol>
-                           </f>
-                        </fs>
-                     </vColl>
-                  </f>
-               
+                           <symbol value="yes"/>
+                        </f>
+                     </fs>
+                  </vColl>
+               </f>
                <f name="multiclass-options">
-                  
                   <vColl org="list">
-                     
                      <string>cleric/fighter</string>
-                     
                      <string>cleric/thief</string>
-                     
                      <string>cleric/assassin</string>
-                     
                      <string>fighter/thief</string>
-                     
                      <string>fighter/assassin</string>
-                     </vColl>
-                  </f>
-               
+                  </vColl>
+               </f>
                <f name="armor-restrictions">
-                  
                   <string> When playing a multi-classed character, the half-orc 
                      must abide by the restrictions of the least favorable class with regard only 
                      to armor.</string>
-                  </f>
-               
+               </f>
                <f name="experience">
-                  
                   <string>Experience is divided equally between
                      the two classes.</string>
-                  </f>
-               
+               </f>
                <f name="languages">
-                  
                   <fs>
-                     
                      <f name="known">
-                        
                         <vColl org="list">
-                           
                            <string>common tongue</string>
-                           
                            <string>alignment language</string>
-                           
                            <string>orcish</string>
-                           </vColl>
-                        </f>
-                     
+                        </vColl>
+                     </f>
                      <f name="additional">
-                        
-                        <numeric value="2"></numeric>
-                        </f>
-                     </fs>
-                  </f>
-               
+                        <numeric value="2"/>
+                     </f>
+                  </fs>
+               </f>
                <f name="infravision">
-                  
                   <fs>
-                     
                      <f name="status">
-                        
-                        <symbol value="present"></symbol>
-                        </f>
-                     
+                        <symbol value="present"/>
+                     </f>
                      <f name="distance">
-                        
-                        <numeric value="60"></numeric>
-                        </f>
-                     
+                        <numeric value="60"/>
+                     </f>
                      <f name="unit">
-                        
                         <string>feet</string>
-                        </f>
-                     </fs>
-                  </f>
-               
+                     </f>
+                  </fs>
+               </f>
                <f name="ability-modifiers">
-                  
                   <fs>
-                     
                      <f name="strength">
-                        
-                        <numeric value="1"></numeric>
-                        </f>
-                     
+                        <numeric value="1"/>
+                     </f>
                      <f name="constitution">
-                        
-                        <numeric value="1"></numeric>
-                        </f>
-                     
+                        <numeric value="1"/>
+                     </f>
                      <f name="charisma">
-                        
-                        <numeric value="-2"></numeric>
-                        </f>
-                     
+                        <numeric value="-2"/>
+                     </f>
                      <f name="charisma-note">
-                        
                         <string>The penalty is in regard to those non- 
                            player character henchmen who are not themselves of half-orc race, so 
-                           the initial, unaltered, <!--Matching string: charisma-->
-                           <rs type="char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
-                        </f>
-                     </fs>
-                  </f>
-               </fs>
-            </div>
-         </body>
-      </text>
+                           the initial, unaltered, <!--Matching string: charisma--><rs type="char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
+                     </f>
+                  </fs>
+               </f>
+            </fs>
+         </div>
+      </body>
+   </text>
 </TEI>

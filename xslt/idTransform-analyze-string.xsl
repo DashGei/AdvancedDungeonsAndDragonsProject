@@ -52,8 +52,7 @@
            <!-- ebb: Uncomment this to 'smoke test' the variable!  <xsl:value-of select="$filename"/> -->
             
             <!-- ebb: Store each output file in xmlOut so we don't overwrite the originals in markup/ -->
-            <xsl:result-document method="xhtml" html-version="5" 
-                omit-xml-declaration="yes" include-content-type="no"
+            <xsl:result-document method="xml" 
                 indent="yes" href="../xmlOut/{$filename}">
               <!-- ebb: Put in the Schema lines from your source files.-->
                 <xsl:processing-instruction name="xml-model">

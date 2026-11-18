@@ -1,143 +1,94 @@
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
-      
       <fileDesc>
-         
          <titleStmt>
-            
             <title>AD&amp;D 1e Player's Handbook</title>
             <!-- ebb: add info about the author, and the team as editors here. -->
-            
             <author>Gary Gygax</author>
-            
             <editor>W. Dashiell Geiser</editor>
-            
             <editor>Nick Grundman</editor>
-            
             <editor>Rayne Robertson</editor>
-            </titleStmt>
+         </titleStmt>
          <!-- ebb: What you're describing in the publicationStmt is really a sourceDesc
         about the electronic version of your source. 
         What you need in <fileDesc> is really about your project team and the publication
         you are creating. -->
-         
          <publicationStmt>
-            
             <p>Documents in this markup encoding project are stored on GitHub at 
-               
-               <ptr target="https://github.com/DashGei/AdvancedDungeonsAndDragonsProject"></ptr> and 
-               transformed and published on the web at
-               
-               <ptr target="https://dashgei.github.io/AdvancedDungeonsAndDragonsProject/"></ptr>
+                <ptr target="https://github.com/DashGei/AdvancedDungeonsAndDragonsProject"/> and 
+                transformed and published on the web at
+                <ptr target="https://dashgei.github.io/AdvancedDungeonsAndDragonsProject/"/>
             </p>
-            </publicationStmt>
-         
+         </publicationStmt>
          <sourceDesc>
-            
             <bibl>
-               
                <title>AD&amp;D Player's Handbook</title>
-               
                <author>Gary Gygax</author>
-               
                <publisher>Random House, Inc</publisher>
-               
                <address>
-                  
                   <addrLine>TSR Hobbies, POB 756</addrLine>
-                  
                   <addrLine>Lake Geneva, WI 53147</addrLine>
-                  </address>
-               
+               </address>
                <date when="1978">1978</date>
-               </bibl>
-            
+            </bibl>
             <bibl>
-               
                <title>AD&amp;D Player's Handbook</title>
-               
                <author>Gary Gygax</author>
-               
                <publisher>Internet Archive</publisher>
-               
                <address>
-                  
                   <addrLine>300 Funston Ave</addrLine>
-                  
                   <addrLine>San Francisco, California</addrLine>
-                  
                   <addrLine>United States</addrLine>
-                  </address>
-               
+               </address>
                <availability>
-                  
                   <p>Preserved by the Internet Archive and released under an open-source license</p>
-                  </availability>
-               </bibl>
-            </sourceDesc>
-         </fileDesc>
-      </teiHeader>
+               </availability>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
    <text>
-      
       <body>
-         
-         <p>It is absolutely essential to have high <!--Matching string: intelligence-->
-            <rs type="char_stats" ref="#int">intelligence</rs> for a character who
+         <p>It is absolutely essential to have high <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs> for a character who
             is a magic-user - especially if a broad selection of spells is to be
-            had, as well as the use of the highest <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs> spells. A magic-user must
-            have an <!--Matching string: intelligence-->
-            <rs type="char_stats" ref="#int">intelligence</rs> of no less than 9 and a minimum <!--Matching string: dexterity-->
-            <rs type="char_stats" ref="#dex">dexterity</rs> of 6. For
-            details of the effects of <!--Matching string: intelligence-->
-            <rs type="char_stats" ref="#int">intelligence</rs> an spell use, see
-            
-            <emph rend="bold">CHARACTER ABILITIES</emph>. A magic-user with <!--Matching string: intelligence-->
-            <rs type="char_stats" ref="#int">intelligence</rs>
+            had, as well as the use of the highest <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> spells. A magic-user must
+            have an <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs> of no less than 9 and a minimum <!--Matching string: dexterity--><rs type="char_stats" ref="#dex">dexterity</rs> of 6. For
+            details of the effects of <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs> an spell use, see
+            <emph rend="bold">CHARACTER ABILITIES</emph>. A magic-user with <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs>
             of 16 or more also gains the benefit of adding 10% to experience points
             awarded to him or her by the Dungeon Master.</p>
-         
          <p>Magic-users draw upon arcane powers in order to exercise their
             profession. While they have mighty spells of offensive, defensive, and
-            informational nature, magic-users are very weak in <!--Matching string: combat-->
-            <rs type="combat_desc" ref="#combat">combat</rs>. They have but
+            informational nature, magic-users are very weak in <!--Matching string: combat--><rs type="combat_desc" ref="#combat">combat</rs>. They have but
             four-sided dice (d4) to determine how many hit points of damage they can
             withstand, and magic-users have the least favorable table and
-            progression as regards missile and melee <!--Matching string: combat-->
-            <rs type="combat_desc" ref="#combat">combat</rs>. Furthermore, they can
+            progression as regards missile and melee <!--Matching string: combat--><rs type="combat_desc" ref="#combat">combat</rs>. Furthermore, they can
             wear no armor and have few weapons they can use, for martial training is
             so foreign to magic-use as to make the two almost mutually exclusive.
             Magicusers can be of any alignment (explained hereafter). </p>
-         
          <p>When a magic-user begins his or her profession, the character is usually
             assumed to possess a strange tome in which he or she has scribed the
             formulae for some of the spells known to the character. This spell book,
-            and each book later added (as the magic-user advances in <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs>s of
-            ability, a book of spells for each higher <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs> of spells which become
+            and each book later added (as the magic-user advances in <!--Matching string: level--><rs type="char_build" ref="#level">level</rs>s of
+            ability, a book of spells for each higher <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> of spells which become
             usable will have to have been prepared through study and research), must
             be maintained by the magic-user. He or she must memorize and prepare for
             the use of each spell, and its casting makes it necessary to reabsorb
             the incantation by consulting the proper book of spells before it can
-            again be cast. (See 
-            <emph rend="bold">CHARACTER SPELLS</emph> for more details.)
+            again be cast. (See <emph rend="bold">CHARACTER SPELLS</emph> for more details.)
             As with a11 other types of spells, those of magic-users must be spoken
             or read aloud. </p>
-         
          <p>There are many powerful items of magic which only this class of character
             can employ. Most magic scrolls, wands, staves, and many of the
             miscellaneous items of magic are usable only by this class. Thus, while
-            magic-users are not strong in <!--Matching string: combat-->
-            <rs type="combat_desc" ref="#combat">combat</rs> with weapons, they are possibly the
-            most fearsome of all character classes when high <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs>s of ability are
+            magic-users are not strong in <!--Matching string: combat--><rs type="combat_desc" ref="#combat">combat</rs> with weapons, they are possibly the
+            most fearsome of all character classes when high <!--Matching string: level--><rs type="char_build" ref="#level">level</rs>s of ability are
             finally attained. Survival to that point can be a problem, however, as
-            low<!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs> magic-users are quite weak. </p>
-         
-         <p>When a magic-user attains 1 lth <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs> (Wizard) or higher, he or she may
+            low<!--Matching string: level--><rs type="char_build" ref="#level">level</rs> magic-users are quite weak. </p>
+         <p>When a magic-user attains 1 lth <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> (Wizard) or higher, he or she may
             enchant items or scribe magic scrolls. This process requires the
             undivided attention of the magic-user for quite long periods of time -
             weeks to months - and it is also costly. As the Dungeon Master is
@@ -151,22 +102,15 @@
             occasional enchantment of items or penning of magic scrolls will take
             place, your referee has complete information on the process, including
             probabilities, time required, materials needed, and costs. </p>
-         
-         <p>It is possible for a magic-user of 12th or higher <!--Matching string: level-->
-            <rs type="char_build" ref="#level">level</rs> to construct a
+         <p>It is possible for a magic-user of 12th or higher <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> to construct a
             stronghold and clear the countryside in a 10 or 20 mile radius of all
             monsters, thus ruling an area much as a noble. If this is accomplished,
             a revenue of 5 silver pieces per inhabitant per month is generated in
             the territory ruled. </p>
-         
-         <p>This is a fake paragraph I am using to demonstrate that it can also find <!--Matching string: strength-->
-            <rs type="char_stats" ref="#str">strength</rs>, <!--Matching string: wisdom-->
-            <rs type="char_stats" ref="#wis">wisdom</rs>, <!--Matching string: charisma-->
-            <rs type="char_stats" ref="#cha">charisma</rs>, and <!--Matching string: constitution-->
-            <rs type="char_stats" ref="#con">constitution</rs>
+         <p>This is a fake paragraph I am using to demonstrate that it can also find <!--Matching string: strength--><rs type="char_stats" ref="#str">strength</rs>, <!--Matching string: wisdom--><rs type="char_stats" ref="#wis">wisdom</rs>, <!--Matching string: charisma--><rs type="char_stats" ref="#cha">charisma</rs>, and <!--Matching string: constitution--><rs type="char_stats" ref="#con">constitution</rs>
             <!--Matching string: Advanced Dungeons & Dragons-->
             <rs type="game_desc" ref="#adnd">Advanced Dungeons &amp; Dragons</rs>
          </p>
-         </body>
-      </text>
+      </body>
+   </text>
 </TEI>
