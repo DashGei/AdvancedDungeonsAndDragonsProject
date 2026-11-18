@@ -48,12 +48,12 @@
     <xsl:template match="/">
         <xsl:for-each select="$markupCollection">
             <!-- ebb: store the currently processing filename using base-uri(). -->
-            <xsl:variable name="filename" select="base-uri() ! tokenize(., '/')[last()]"/>
+            <xsl:variable name="filename" select="base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.xml')"/>
            <!-- ebb: Uncomment this to 'smoke test' the variable!  <xsl:value-of select="$filename"/> -->
             
             <!-- ebb: Store each output file in xmlOut so we don't overwrite the originals in markup/ -->
             <xsl:result-document method="xml" 
-                indent="yes" href="../xmlOut/{$filename}">
+                indent="yes" href="../xmlOut/{$filename}-out.xml">
               <!-- ebb: Put in the Schema lines from your source files.-->
                 <xsl:processing-instruction name="xml-model">
             <xsl:text>href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:text>

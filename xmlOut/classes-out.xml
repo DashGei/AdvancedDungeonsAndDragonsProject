@@ -107,7 +107,7 @@
             monsters, thus ruling an area much as a noble. If this is accomplished,
             a revenue of 5 silver pieces per inhabitant per month is generated in
             the territory ruled. </p>
-         <p>This is a fake paragraph I am using to demonstrate that it can also find <!--Matching string: strength--><rs type="char_stats" ref="#str">strength</rs>, <!--Matching string: wisdom--><rs type="char_stats" ref="#wis">wisdom</rs>, <!--Matching string: charisma--><rs type="char_stats" ref="#cha">charisma</rs>, and <!--Matching string: constitution--><rs type="char_stats" ref="#con">constitution</rs>
+         <p resp="#nrg">This is a fake paragraph I am using to demonstrate that it can also find <!--Matching string: strength--><rs type="char_stats" ref="#str">strength</rs>, <!--Matching string: wisdom--><rs type="char_stats" ref="#wis">wisdom</rs>, <!--Matching string: charisma--><rs type="char_stats" ref="#cha">charisma</rs>, and <!--Matching string: constitution--><rs type="char_stats" ref="#con">constitution</rs>
             <!--Matching string: Advanced Dungeons & Dragons-->
             <rs type="game_desc" ref="#adnd">Advanced Dungeons &amp; Dragons</rs>
          </p>
