@@ -163,6 +163,22 @@ iframe {
     height: 100vh;
 }
 
+.collapseButton {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.active, .collapseButton:hover {
+  background-color: #ccc;
+}
+
+.collapsible {
+  display: none;
+  overflow: hidden;
+}
+
 .content {
     border: 3px solid;
     padding: 10px;
