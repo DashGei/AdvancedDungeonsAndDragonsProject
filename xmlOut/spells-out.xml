@@ -52,7 +52,7 @@
    </teiHeader>
    <text>
       <body>
-         <div>
+         <div part="N" org="uniform" sample="complete">
             <fs type="Spells">
                <f name="Fireball">
                   <fs type="attributes">
@@ -65,7 +65,7 @@
                            <numeric value="10" n="base"/>
                            <!--nrg: @n is being used here "in the specification of a standard reference system for the text" as per TEI-->
                            <numeric value="1" n="scaling_val"/>
-                           <string n="scaling_type">per <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> of spellcaster</string>
+                           <string n="scaling_type">per <rs type="char_build" ref="#level">level</rs> of spellcaster</string>
                            <string n="unit">inch</string>
                         </vColl>
                      </f>
@@ -112,13 +112,13 @@
                            <numeric value="1" max="6" n="d6"/>
                            <!--nrg: I'm wondering if this could be a good way to convey dice? Not sure-->
                            <numeric value="1" n="scaling_val"/>
-                           <string n="scaling_type">per <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> of spellcaster</string>
+                           <string n="scaling_type">per <rs type="char_build" ref="#level">level</rs> of spellcaster</string>
                         </vColl>
                      </f>
                      <!--nrg: will need to be annotated later-->
                      <f name="desc"> A fireball is an explosive burst of flame, which detonates with
-                        a low roar, and delivers damage proportionate to the <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> of the magic-user
-                        who cast it, i.e. 1 six-sided die (d6) for each <!--Matching string: level--><rs type="char_build" ref="#level">level</rs> of experience of the
+                        a low roar, and delivers damage proportionate to the <rs type="char_build" ref="#level">level</rs> of the magic-user
+                        who cast it, i.e. 1 six-sided die (d6) for each <rs type="char_build" ref="#level">level</rs> of experience of the
                         spell caster. Exception: Magic fireball wands deliver 6 die fireballs (6d6),
                         magic staves with this capability deliver 8 die fireballs, and scroll spells
                         of this type deliver a fireball of from 5 to 10 dice (d6 + 4) of damage. The
@@ -135,8 +135,8 @@
                         (distance and height) at which the fireball is to burst. A streak flashes
                         from the pointing digit and, unless it impacts upon a material body prior to
                         attaining the prescribed range, flowers into the fireball. If creatures fail
-                        their <!--Matching string: saving throws--><rs type="combat_desc" ref="#saving_throws">saving throws</rs>, they all take full hit point damage from the blast.
-                        Those who make <!--Matching string: saving throws--><rs type="combat_desc" ref="#saving_throws">saving throws</rs> manage to dodge, fall flat or roll aside,
+                        their <rs type="combat_desc" ref="#saving_throws">saving throws</rs>, they all take full hit point damage from the blast.
+                        Those who make <rs type="combat_desc" ref="#saving_throws">saving throws</rs> manage to dodge, fall flat or roll aside,
                         taking 1/2 the full hit point damage - each and every one within the blast
                         area. The material component of this spell is a tiny ball composed of bat
                         guano and sulphur </f>
@@ -156,10 +156,10 @@
                         a faint or cataleptic state for 1 round, but thereafter the creature would
                         be alive and well. Typical command words are: back, halt, flee, run, stop,
                         fall, fly, go, leave, surrender, sleep, rest, etc. Undead are not affected
-                        by a command. Creatures with <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs> of 13 or more, and creatures with
-                        6 or more hit dice (or experience <!--Matching string: level--><rs type="char_build" ref="#level">level</rs>s) are entitled to a saving throw
-                        versus magic. (Creatures with 13 or higher <!--Matching string: intelligence--><rs type="char_stats" ref="#int">intelligence</rs> and 6 hit
-                        dice/<!--Matching string: level--><rs type="char_build" ref="#level">level</rs>s do not get 2 <!--Matching string: saving throws--><rs type="combat_desc" ref="#saving_throws">saving throws</rs>!) </f>
+                        by a command. Creatures with <rs type="char_stats" ref="#int">intelligence</rs> of 13 or more, and creatures with
+                        6 or more hit dice (or experience <rs type="char_build" ref="#level">level</rs>s) are entitled to a saving throw
+                        versus magic. (Creatures with 13 or higher <rs type="char_stats" ref="#int">intelligence</rs> and 6 hit
+                        dice/<rs type="char_build" ref="#level">level</rs>s do not get 2 <rs type="combat_desc" ref="#saving_throws">saving throws</rs>!) </f>
                   </fs>
                </f>
             </fs>

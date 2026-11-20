@@ -52,7 +52,7 @@
    </teiHeader>
    <text>
       <body>
-         <div type="fs">
+         <div type="fs" part="N" org="uniform" sample="complete">
             <fs type="half-orc">
                <f name="offspring">
                   <string>Orcs are fecund and create many cross-breeds, most of the offspring of such being typically orcish. However, some one-tenth of orc-human 
@@ -141,7 +141,7 @@
                      <f name="charisma-note">
                         <string>The penalty is in regard to those non- 
                            player character henchmen who are not themselves of half-orc race, so 
-                           the initial, unaltered, <!--Matching string: charisma--><rs type="char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
+                           the initial, unaltered, <rs type="char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
                      </f>
                   </fs>
                </f>
