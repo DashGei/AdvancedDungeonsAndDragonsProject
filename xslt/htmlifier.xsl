@@ -70,19 +70,19 @@
       
     <xsl:template match="rs">
         <!--nrg: This is the HTML structure of a tooltip-->
-        <span class="{concat(current()/@type, ' tooltip-trigger')}">
+        <span class="{concat(current()/substring-after(current()/@type, '#'), ' tooltip-trigger')}">
             <xsl:variable name="matchingGloss" as="element()+" select="$glossary//item/list/item[@xml:id = substring-after(current()/@ref, '#')]"/>
             <xsl:apply-templates/> <!--nrg: matching string, text that contains the tooltip-->
             <span class="tt-frame">
                 <span class="tt-cont">
                     <xsl:value-of select="$matchingGloss/p[@ana = '#tto']"/><br/> <!--nrg: content of the tooltip-->
                     <span class="tt-desc">
-                    Category: <xsl:value-of select="current()/@type"/> | <!--nrg: category description, should find in glossary later-->
-                    Page: <xsl:value-of select="$matchingGloss/@n"/> (+1 in PDF) | <!--nrg: page number(s) of tooltip text-->
-                    Coded by: <xsl:value-of select="$matchingGloss/@resp"/><!--nrg: encoder info, should find in glossary later-->
+                        Category: <xsl:value-of select="$glossary//list[@xml:id = substring-after(current()/@type, '#')]/../preceding-sibling::label[1]"/> | <!--nrg: category description-->
+                        Page: <xsl:value-of select="$matchingGloss/@n"/> (+1 in PDF) | <!--nrg: page number(s) of tooltip text-->
+                        Coded by: <xsl:value-of select="$glossary//item/list/item[@xml:id = substring-after($matchingGloss/@resp, '#')]/preceding-sibling::label[1]"/><br/><!--nrg: encoder info, should find in glossary later-->
                     </span>
                     <button type="button" class="collapseButton">Open Handbook</button>
-                    <iframe class="collapsible" src="{concat('content/players-handbook.pdf', '#page=', $matchingGloss/@n + 1)}"/>
+                    <iframe class="collapsible" src="{concat('content/players-handbook.pdf#page=', $matchingGloss/@n + 1)}"/>
                 </span>
             </span>
         </span>

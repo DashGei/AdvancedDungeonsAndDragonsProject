@@ -85,7 +85,7 @@
                     <xsl:variable name="matchingGloss" as="element()?" 
                         select="$glossary//label[(normalize-space() ! lower-case(.) = regex-group(0) ! lower-case(.))]"/>
                     <!-- ebb: Our regex analyze-string matching substring is just regex-group(0) . Lower-case() both sides to ensure matches all round -->
-                    <rs type="{$matchingGloss/parent::list/@xml:id}" 
+                    <rs type="#{$matchingGloss/parent::list/@xml:id}" 
                         ref="#{$matchingGloss//following-sibling::item[1]/@xml:id}">
                         <xsl:value-of select="."/>
                     </rs>

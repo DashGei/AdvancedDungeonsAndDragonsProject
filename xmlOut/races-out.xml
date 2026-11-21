@@ -141,7 +141,7 @@
                      <f name="charisma-note">
                         <string>The penalty is in regard to those non- 
                            player character henchmen who are not themselves of half-orc race, so 
-                           the initial, unaltered, <rs type="char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
+                           the initial, unaltered, <rs type="#char_stats" ref="#cha">charisma</rs> ability score should be recorded.</string>
                      </f>
                   </fs>
                </f>
